@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FERDI ALGAFAR — Digital Marketer & Web Developer</title>
+  <meta name="description" content="Portfolio profesional Ferdi Algafar — Digital Marketer, Web Developer, dan Creative Talent. Fresh graduate Politeknik APP Jakarta. Open to work remote worldwide." />
+  <meta name="author" content="Ferdi Algafar" />
+  <meta name="keywords" content="Ferdi Algafar, digital marketer, web developer, creative design, fresh graduate, Jakarta, Indonesia, Politeknik APP, manajemen pemasaran, HTML CSS JavaScript, Canva, remote work" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#00F5FF" />
+  <meta name="copyright" content="Ferdi Algafar 2026" />
+  <meta name="language" content="Indonesian" />
+  <meta name="revisit-after" content="7 days" />
+  <!-- FIX #9: Security headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ferdi Algafar — Digital Marketer & Web Developer" />
+  <meta property="og:description" content="Fresh graduate Manajemen Pemasaran Industri dari Politeknik APP Jakarta dengan pengalaman nyata membangun website perusahaan dan kampanye digital marketing. Open to work — remote worldwide." />
+  <meta property="og:image" content="FERDI-ALGAFAR.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://ferdialgafar.github.io" />
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:site_name" content="Ferdi Algafar Portfolio" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ferdialghafarr" />
+  <meta name="twitter:creator" content="@ferdialghafarr" />
+  <meta name="twitter:title" content="Ferdi Algafar — Digital Marketer & Web Developer" />
+  <meta name="twitter:description" content="Fresh graduate with real experience in web development, digital marketing, and creative campaigns. Open to work worldwide." />
+  <meta name="twitter:image" content="FERDI-ALGAFAR.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="FERDI-ALGAFAR.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="FERDI-ALGAFAR.png" />
+  <link rel="apple-touch-icon" href="FERDI-ALGAFAR.png" />
+  <link rel="shortcut icon" href="FERDI-ALGAFAR.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- FIX #7: Tambah font-display=swap -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap&font-display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- FIX #16: noscript fallback -->
+  <noscript>
+    <style>
+      .porto-card, .timeline-item, .pillar-card, .cert-card, .video-card { opacity: 1 !important; transform: none !important; }
+      #particles-canvas, .grid-overlay { display: none; }
+    </style>
+    <div style="position:fixed;top:0;left:0;right:0;z-index:99999;background:#0a1428;color:#00f5ff;text-align:center;padding:8px;font-size:14px;">
+      Aktifkan JavaScript untuk pengalaman terbaik di website ini.
+    </div>
+  </noscript>
+
+  <!-- CERT LIGHTBOX -->
+  <div id="certLightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:100000;align-items:center;justify-content:center;flex-direction:column;gap:1rem;padding:1.5rem;" role="dialog" aria-modal="true" aria-label="Lihat Sertifikat">
+    <button onclick="closeCertLightbox()" aria-label="Tutup lightbox sertifikat" style="position:absolute;top:1.2rem;right:1.5rem;background:transparent;border:2px solid #00f5ff;color:#00f5ff;border-radius:50%;width:2.2rem;height:2.2rem;font-size:1.1rem;cursor:pointer;">✕</button>
+    <img id="lightboxImg" src="" alt="Sertifikat" style="max-width:90vw;max-height:80vh;border-radius:12px;border:2px solid #00f5ff;object-fit:contain;" onerror="document.getElementById('lightboxErr').style.display='block';this.style.display='none';">
+    <div id="lightboxErr" style="display:none;color:#aaa;text-align:center;font-size:.9rem;">⚠️ Gambar tidak ditemukan di folder project.</div>
+    <p id="lightboxCaption" style="color:#00f5ff;font-size:.9rem;font-family:monospace;text-align:center;margin:0;"></p>
+  </div>
+
+  <canvas id="particles-canvas"></canvas>
+  <div class="grid-overlay"></div>
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+  <div id="scroll-bar" aria-hidden="true"></div>
+
+  <!-- LANGUAGE SWITCHER -->
+  <div id="lang-switcher" role="group" aria-label="Pilih bahasa">
+    <button class="lang-btn active" onclick="setLang('id')" title="Bahasa Indonesia" aria-label="Bahasa Indonesia">ID</button>
+    <button class="lang-btn" onclick="setLang('en')" title="English" aria-label="English">EN</button>
+    <button class="lang-btn" onclick="setLang('zh')" title="中文" aria-label="中文">中</button>
+    <button class="lang-btn" onclick="setLang('es')" title="Español" aria-label="Español">ES</button>
+  </div>
+
+  <!-- FIX #14: aria-label pada back-to-top -->
+  <button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Kembali ke atas halaman">↑</button>
+
+  <!-- FIX #9: rel="noopener noreferrer" pada semua target="_blank" -->
+  <a id="wa-float" href="https://wa.me/6281188001580" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp dengan Ferdi Algafar">
+    💬
+    <span class="wa-tooltip" aria-hidden="true">Chat WhatsApp</span>
+  </a>
+
+  <!-- Case Study Modal -->
+  <div class="modal-overlay" id="caseStudyModal" onclick="closeModal(event)" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Tutup case study">✕</button>
+      <div class="modal-title" id="modalTitle">Case Study</div>
+      <div class="modal-section">
+        <div class="modal-section-label">Problem</div>
+        <div class="modal-section-text" id="modalProblem"></div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-label">Process</div>
+        <div class="modal-section-text" id="modalProcess"></div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-label">Result</div>
+        <div class="modal-section-text" id="modalResult"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar" role="navigation" aria-label="Menu utama">
+    <a href="#home" class="nav-logo">
+           <img src="FERDI-ALGAFAR.png" alt="Foto Ferdi Algafar" class="nav-logo-img" width="38" height="38"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="nav-logo-fallback" style="display:none;" aria-hidden="true">FA</div>
+      FA
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home" data-i18n="nav_home">Home</a></li>
+      <li><a href="#about" data-i18n="nav_about">Tentang</a></li>
+      <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+      <li><a href="#skills" data-i18n="nav_services">Layanan</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Kontak</a></li>
+    </ul>
+    <a href="https://wa.me/6281188001580" target="_blank" rel="noopener noreferrer" class="nav-cta" data-i18n="nav_cta">Hubungi Saya</a>
+    <!-- FIX #14: aria-label hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Buka menu navigasi" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav" role="navigation" aria-label="Menu mobile">
+    <a href="#home" onclick="closeMobile()" data-i18n="nav_home">Home</a>
+    <a href="#about" onclick="closeMobile()" data-i18n="nav_about">Tentang Saya</a>
+    <a href="#portfolio" onclick="closeMobile()" data-i18n="nav_portfolio">Portfolio</a>
+    <a href="#certifications" onclick="closeMobile()">Sertifikasi</a>
+    <a href="#skills" onclick="closeMobile()" data-i18n="nav_services">Layanan & Skill</a>
+    <a href="#contact" onclick="closeMobile()" data-i18n="nav_contact">Kontak</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="home" aria-label="Halaman utama">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="otw-badge"><span class="otw-dot" aria-hidden="true"></span><span data-i18n="otw_badge">🟢 Open to Work — Remote &amp; On-site</span></div>
+        <div class="hero-badge" data-i18n="hero_badge">Available for Remote Work &amp; Freelance</div>
+        <!-- FIX #19: data-text tetap "FERDI" karena glitch hanya untuk kata pertama -->
+        <h1 class="hero-name"><span class="glitch" data-text="FERDI">FERDI</span><br>ALGAFAR</h1>
+        <div class="hero-typewriter" aria-live="polite"><span id="typewriter-text"></span></div>
+        <p class="hero-desc" data-i18n="hero_desc">Menggabungkan strategi pemasaran dan teknologi digital untuk menumbuhkan bisnis.</p>
+        <div class="hero-btns">
+          <a href="https://wa.me/6281188001580" target="_blank" rel="noopener noreferrer" class="btn-primary" data-i18n="hero_btn1">⚡ Hire Me Now</a>
+          <a href="#portfolio" class="btn-outline" data-i18n="hero_btn2">🚀 Explore My Works</a>
+          <a href="https://drive.google.com/uc?export=download&id=1J8L0mLxL1t6VMIZBNepEusGk5szbDEm0" target="_blank" rel="noopener noreferrer" class="btn-outline">📄 Download CV</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-photo-wrapper">
+          <div class="hero-photo-ring"></div>
+          <div class="hero-photo-ring2"></div>
+          <div class="hero-photo-inner">
+            <img src="FERDI-ALGAFAR.png" alt="Ferdi Algafar — Digital Marketer & Web Developer" width="360" height="360"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="photo-fallback" style="display:none;" aria-hidden="true">FA</div>
+          </div>
+          <div class="hero-float-card card-f1">📊 <span>6</span> <span data-i18n="float_projects">Project Selesai</span></div>
+          <div class="hero-float-card card-f2">⭐ <span>5.0</span> <span data-i18n="float_rating">Rating Klien</span></div>
+          <div class="hero-float-card card-f3">🌐 Remote <span>Ready</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" aria-label="Tentang Ferdi Algafar">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="section-label" data-i18n="about_label">Tentang Saya</div>
+          <h2 class="section-title" data-i18n="about_title">Bertemu dengan <span>Ferdi Algafar</span></h2>
+          <p data-i18n="about_p1">Saya adalah seorang profesional digital multitalenta yang menempuh pendidikan di <strong style="color:var(--cyan)">Politeknik APP Jakarta</strong>, Jurusan <strong style="color:var(--cyan)">Manajemen Pemasaran Industri Elektronika</strong>.</p>
+          <p data-i18n="about_p2">Pengalaman magang di <strong style="color:var(--cyan)">PT Niagamas Setiausaha &amp; PT Power Elektrika Nusantara</strong> sebagai Digital Marketer &amp; Web Developer mengasah kemampuan saya dalam membangun website perusahaan dari nol.</p>
+          <p data-i18n="about_p3">Saya juga dikenal sebagai <strong style="color:var(--cyan)">Creative Talent</strong> dalam iklan Good Day dan IndiHome, serta <strong style="color:var(--cyan)">Koordinator Sponsorship</strong> di APP Fair.</p>
+          <div class="about-stats">
+            <div class="stat-card"><div class="stat-num">2</div><div class="stat-label" data-i18n="stat_companies">Perusahaan Magang</div></div>
+            <div class="stat-card"><div class="stat-num">6</div><div class="stat-label" data-i18n="stat_projects">Project Diselesaikan</div></div>
+            <div class="stat-card"><div class="stat-num">10+</div><div class="stat-label" data-i18n="stat_tools">Tools Dikuasai</div></div>
+            <div class="stat-card"><div class="stat-num">3+</div><div class="stat-label" data-i18n="stat_years">Tahun Belajar</div></div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div style="position:relative;">
+            <div class="about-accent" aria-hidden="true"></div>
+            <div class="about-photo-box">
+              <!-- FIX #12: width & height eksplisit -->
+              <img src="FERDI-ALGAFAR.png" alt="Ferdi Algafar" width="340" height="420"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div style="display:none;background:linear-gradient(145deg,var(--navy-mid),var(--navy-light));width:100%;height:100%;align-items:center;justify-content:center;font-family:var(--font-head);font-size:4rem;font-weight:900;color:var(--cyan);" aria-hidden="true">FA</div>
+              <div class="about-photo-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="about-edu-badge">🎓 Politeknik APP Jakarta<br><strong>Manajemen Pemasaran Industri Elektronika</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS MARQUEE -->
+  <section id="tools" style="padding:4rem 0;overflow:hidden;position:relative;z-index:2;" aria-label="Tools dan teknologi yang dikuasai">
+    <div style="position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(0,180,255,0.05);filter:blur(100px);top:-100px;left:-150px;pointer-events:none;" aria-hidden="true"></div>
+    <div style="position:absolute;width:400px;height:400px;border-radius:50%;background:rgba(100,60,255,0.05);filter:blur(100px);bottom:-80px;right:-100px;pointer-events:none;" aria-hidden="true"></div>
+    <div style="text-align:center;margin-bottom:48px;position:relative;z-index:2;">
+      <div style="display:inline-flex;align-items:center;gap:12px;font-family:var(--font-head);font-size:0.65rem;letter-spacing:0.25em;color:var(--cyan);text-transform:uppercase;margin-bottom:14px;" aria-hidden="true">
+        <span style="display:block;width:40px;height:1px;background:linear-gradient(90deg,transparent,var(--cyan));"></span>
+        My Arsenal
+        <span style="display:block;width:40px;height:1px;background:linear-gradient(90deg,var(--cyan),transparent);"></span>
+      </div>
+      <h2 style="font-family:var(--font-head);font-size:clamp(1rem,2.5vw,1.6rem);font-weight:700;color:var(--white);letter-spacing:0.1em;text-transform:uppercase;display:inline-flex;align-items:center;gap:10px;" data-i18n="tools_title">
+        Tools &amp; Technologies I Master
+        <span style="width:10px;height:10px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px var(--cyan),0 0 30px rgba(0,245,255,0.5);flex-shrink:0;animation:pulse 1.8s infinite;" aria-hidden="true"></span>
+      </h2>
+    </div>
+    <div style="position:relative;overflow:hidden;margin-bottom:22px;z-index:2;" aria-hidden="true">
+      <div style="position:absolute;top:0;bottom:0;left:0;width:140px;background:linear-gradient(90deg,var(--navy),transparent);z-index:3;pointer-events:none;"></div>
+      <div style="position:absolute;top:0;bottom:0;right:0;width:140px;background:linear-gradient(270deg,var(--navy),transparent);z-index:3;pointer-events:none;"></div>
+      <div class="marquee-track" id="track1"></div>
+    </div>
+    <div style="position:relative;overflow:hidden;z-index:2;" aria-hidden="true">
+      <div style="position:absolute;top:0;bottom:0;left:0;width:140px;background:linear-gradient(90deg,var(--navy),transparent);z-index:3;pointer-events:none;"></div>
+      <div style="position:absolute;top:0;bottom:0;right:0;width:140px;background:linear-gradient(270deg,var(--navy),transparent);z-index:3;pointer-events:none;"></div>
+      <div class="marquee-track reverse" id="track2"></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" aria-label="Pengalaman profesional">
+    <div class="container">
+      <div class="section-label" data-i18n="exp_label">Perjalanan Karier</div>
+      <h2 class="section-title" data-i18n="exp_title">Pengalaman <span>Profesional</span></h2>
+      <div class="experience-layout">
+        <div class="exp-summary-card">
+          <div class="exp-summary-title">📌 Overview Karier</div>
+          <div class="exp-summary-stat"><div class="exp-summary-icon">🏢</div><div class="exp-summary-text"><strong>2 Perusahaan</strong><span>Pengalaman Magang</span></div></div>
+          <div class="exp-summary-stat"><div class="exp-summary-icon">📅</div><div class="exp-summary-text"><strong>2022 — 2026</strong><span>Rentang Karier Aktif</span></div></div>
+          <div class="exp-summary-stat"><div class="exp-summary-icon">🌐</div><div class="exp-summary-text"><strong>2 Website</strong><span>Dibangun dari Nol</span></div></div>
+          <div class="exp-summary-stat"><div class="exp-summary-icon">🎬</div><div class="exp-summary-text"><strong>2 Brand Nasional</strong><span>Creative Talent</span></div></div>
+          <div class="exp-summary-stat"><div class="exp-summary-icon">🎪</div><div class="exp-summary-text"><strong>Festival Kampus</strong><span>Koordinator Sponsorship</span></div></div>
+          <div class="exp-summary-stat"><div class="exp-summary-icon">🎨</div><div class="exp-summary-text"><strong>Creative Design</strong><span>Desain Visual &amp; Konten</span></div></div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot-wrap"><div class="timeline-dot" aria-hidden="true">●</div></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-icon-box" aria-hidden="true">💻</div>
+                <div class="timeline-meta">
+                  <div class="timeline-date">2025 — 2026</div>
+                  <div class="timeline-title" data-i18n="exp1_title">Digital Marketer &amp; Web Developer</div>
+                  <div class="timeline-company">PT Niagamas Setiausaha &amp; PT Power Elektrika Nusantara</div>
+                </div>
+              </div>
+              <div class="timeline-desc" data-i18n="exp1_desc">Membangun dua website perusahaan dari nol menggunakan HTML, CSS, dan JavaScript. Mengelola konten digital, strategi pemasaran online, dan kebutuhan digital kedua perusahaan selama masa magang.</div>
+              <div class="timeline-tags"><span class="tl-tag">HTML/CSS/JS</span><span class="tl-tag">Digital Marketing</span><span class="tl-tag">Web Development</span><span class="tl-tag">Content Management</span><span class="tl-tag">SEO</span></div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot-wrap"><div class="timeline-dot" aria-hidden="true">●</div></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-icon-box" aria-hidden="true">🎬</div>
+                <div class="timeline-meta">
+                  <div class="timeline-date">2023</div>
+                  <div class="timeline-title" data-i18n="exp2_title">Creative Talent — Video Iklan TV &amp; Digital</div>
+                  <div class="timeline-company">Good Day &amp; IndiHome (Brand Campaign)</div>
+                </div>
+              </div>
+              <div class="timeline-desc" data-i18n="exp2_desc">Tampil sebagai talent kreatif dalam kampanye iklan televisi Good Day dan kampanye digital IndiHome Telkom Indonesia, terlibat dalam proses produksi dari konsep hingga pengambilan gambar.</div>
+              <div class="timeline-tags"><span class="tl-tag">TV Commercial</span><span class="tl-tag">Digital Campaign</span><span class="tl-tag">Brand Storytelling</span><span class="tl-tag">On-Camera</span></div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot-wrap"><div class="timeline-dot" aria-hidden="true">●</div></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-icon-box" aria-hidden="true">🎪</div>
+                <div class="timeline-meta">
+                  <div class="timeline-date">2022 — 2023</div>
+                  <div class="timeline-title" data-i18n="exp3_title">Koordinator Sponsorship</div>
+                  <div class="timeline-company">Festival Kampus "APP Fair" — Politeknik APP Jakarta</div>
+                </div>
+              </div>
+              <div class="timeline-desc" data-i18n="exp3_desc">Memimpin tim koordinasi sponsorship untuk festival kampus APP Fair, mengelola komunikasi dengan puluhan sponsor, dan berhasil mencapai target pendanaan yang ditetapkan.</div>
+              <div class="timeline-tags"><span class="tl-tag">Event Management</span><span class="tl-tag">Sponsorship</span><span class="tl-tag">Negosiasi</span><span class="tl-tag">Leadership</span></div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot-wrap"><div class="timeline-dot" aria-hidden="true">●</div></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-icon-box" aria-hidden="true">🎨</div>
+                <div class="timeline-meta">
+                  <div class="timeline-date">2022 — 2026</div>
+                  <div class="timeline-title" data-i18n="exp4_title">Creative Designer — Desain Visual &amp; Konten</div>
+                  <div class="timeline-company">Freelance &amp; Internship Projects</div>
+                </div>
+              </div>
+              <div class="timeline-desc" data-i18n="exp4_desc">Merancang konten visual, poster promosi, identitas brand, dan materi marketing menggunakan Canva. Mencakup desain kemeja corporate, konten sosial media, banner digital, dan branding assets untuk kebutuhan perusahaan magang dan project freelance.</div>
+              <div class="timeline-tags"><span class="tl-tag">Canva</span><span class="tl-tag">Visual Design</span><span class="tl-tag">Brand Identity</span><span class="tl-tag">Social Media</span><span class="tl-tag">Content Creation</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <!-- FIX #1: Semua path sertifikat diubah ke ../sertifikat-* -->
+  <section id="certifications" aria-label="Sertifikasi profesional">
+    <div class="container">
+      <div class="section-label" data-i18n="cert_label">Sertifikasi</div>
+      <h2 class="section-title" data-i18n="cert_title">Sertifikasi <span>Profesional</span></h2>
+      <p class="cert-intro" data-i18n="cert_intro">Komitmen saya terhadap pengembangan diri. Klik kartu untuk melihat sertifikat.</p>
+      <div class="cert-grid">
+
+        <div class="cert-card" onclick="openCertLightbox('sertifikat-niagamas.png','Sertifikat Magang — PT Niagamas Setiausaha')" role="button" tabindex="0" aria-label="Lihat sertifikat PT Niagamas Setiausaha" onkeydown="if(event.key==='Enter')openCertLightbox('sertifikat-niagamas.png','Sertifikat Magang — PT Niagamas Setiausaha')">
+          <div class="cert-img-wrap">
+            <!-- FIX #12: width/height eksplisit; FIX #1: path ../ -->
+            <img src="sertifikat-niagamas.png" alt="Sertifikat Magang PT Niagamas Setiausaha" width="400" height="200"
+                 onerror="this.parentElement.querySelector('.cert-fallback').style.display='flex';this.style.display='none';">
+            <div class="cert-fallback" style="display:none;" aria-hidden="true"><span style="font-size:3.5rem;">🏢</span><span>sertifikat-niagamas.png</span></div>
+            <div class="cert-img-overlay" aria-hidden="true">🔍 Lihat Sertifikat</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-card-top"><div class="cert-icon" aria-hidden="true">🏢</div><span class="cert-badge completed">Completed</span></div>
+            <div class="cert-name">Sertifikat Magang — Digital Marketer &amp; Web Developer</div>
+            <div class="cert-platform">PT Niagamas Setiausaha</div>
+            <div class="cert-year">2025 — 2026</div>
+          </div>
+        </div>
+
+        <div class="cert-card" onclick="openCertLightbox('sertifikat-pen.png','Sertifikat Magang — PT Power Elektrika Nusantara')" role="button" tabindex="0" aria-label="Lihat sertifikat PT Power Elektrika Nusantara" onkeydown="if(event.key==='Enter')openCertLightbox('sertifikat-pen.png','Sertifikat Magang — PT Power Elektrika Nusantara')">
+          <div class="cert-img-wrap">
+            <img src="sertifikat-pen.png" alt="Sertifikat Magang PT Power Elektrika Nusantara" width="400" height="200"
+                 onerror="this.parentElement.querySelector('.cert-fallback').style.display='flex';this.style.display='none';">
+            <div class="cert-fallback" style="display:none;" aria-hidden="true"><span style="font-size:3.5rem;">⚡</span><span>sertifikat-pen.png</span></div>
+            <div class="cert-img-overlay" aria-hidden="true">🔍 Lihat Sertifikat</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-card-top"><div class="cert-icon" aria-hidden="true">⚡</div><span class="cert-badge completed">Completed</span></div>
+            <div class="cert-name">Sertifikat Magang — Digital Marketer &amp; Web Developer</div>
+            <div class="cert-platform">PT Power Elektrika Nusantara</div>
+            <div class="cert-year">2025 — 2026</div>
+          </div>
+        </div>
+
+        <div class="cert-card" onclick="openCertLightbox('sertifikat-app-fair.png','Koordinator Sponsorship — Festival APP Fair')" role="button" tabindex="0" aria-label="Lihat sertifikat APP Fair" onkeydown="if(event.key==='Enter')openCertLightbox('sertifikat-app-fair.png','Koordinator Sponsorship — Festival APP Fair')">
+          <div class="cert-img-wrap">
+            <img src="sertifikat-app-fair.png" alt="Sertifikat Koordinator Sponsorship APP Fair" width="400" height="200"
+                 onerror="this.parentElement.querySelector('.cert-fallback').style.display='flex';this.style.display='none';">
+            <div class="cert-fallback" style="display:none;" aria-hidden="true"><span style="font-size:3.5rem;">🎪</span><span>sertifikat-app-fair.png</span></div>
+            <div class="cert-img-overlay" aria-hidden="true">🔍 Lihat Sertifikat</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-card-top"><div class="cert-icon" aria-hidden="true">🎪</div><span class="cert-badge completed">Completed</span></div>
+            <div class="cert-name">Koordinator Sponsorship — Festival APP Fair</div>
+            <div class="cert-platform">Politeknik APP Jakarta</div>
+            <div class="cert-year">2022 — 2023</div>
+          </div>
+        </div>
+
+        <div class="cert-card" onclick="openCertLightbox('sertifikat-marketing-1.png','Sertifikat Seminar Kampus 1')" role="button" tabindex="0" aria-label="Lihat sertifikat seminar 1" onkeydown="if(event.key==='Enter')openCertLightbox('sertifikat-marketing-1.png','Sertifikat Seminar Kampus 1')">
+          <div class="cert-img-wrap">
+            <img src="sertifikat-marketing-1.png" alt="Sertifikat Seminar Kampus 1" width="400" height="200"
+                 onerror="this.parentElement.querySelector('.cert-fallback').style.display='flex';this.style.display='none';">
+            <div class="cert-fallback" style="display:none;" aria-hidden="true"><span style="font-size:3.5rem;">🎓</span><span>sertifikat-marketing-1.png</span></div>
+            <div class="cert-img-overlay" aria-hidden="true">🔍 Lihat Sertifikat</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-card-top"><div class="cert-icon" aria-hidden="true">🎓</div><span class="cert-badge completed">Completed</span></div>
+            <div class="cert-name">Sertifikat Seminar &amp; Kegiatan Kampus</div>
+            <div class="cert-platform">Politeknik APP Jakarta</div>
+            <div class="cert-year">2022 — 2025</div>
+          </div>
+        </div>
+
+        <div class="cert-card" onclick="openCertLightbox('sertifikat-marketing-2.png','Sertifikat Seminar Kampus 2')" role="button" tabindex="0" aria-label="Lihat sertifikat seminar 2" onkeydown="if(event.key==='Enter')openCertLightbox('sertifikat-marketing-2.png','Sertifikat Seminar Kampus 2')">
+          <div class="cert-img-wrap">
+            <img src="sertifikat-marketing-2.png" alt="Sertifikat Seminar Kampus 2" width="400" height="200"
+                 onerror="this.parentElement.querySelector('.cert-fallback').style.display='flex';this.style.display='none';">
+            <div class="cert-fallback" style="display:none;" aria-hidden="true"><span style="font-size:3.5rem;">🎓</span><span>sertifikat-marketing-2.png</span></div>
+            <div class="cert-img-overlay" aria-hidden="true">🔍 Lihat Sertifikat</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-card-top"><div class="cert-icon" aria-hidden="true">🎓</div><span class="cert-badge completed">Completed</span></div>
+            <div class="cert-name">Sertifikat Seminar &amp; Kegiatan Kampus</div>
+            <div class="cert-platform">Politeknik APP Jakarta</div>
+            <div class="cert-year">2022 — 2025</div>
+          </div>
+        </div>
+
+        <div class="cert-card" onclick="openCertLightbox('sertifikat-marketing-3.png','Sertifikat Seminar Kampus 3')" role="button" tabindex="0" aria-label="Lihat sertifikat seminar 3" onkeydown="if(event.key==='Enter')openCertLightbox('sertifikat-marketing-3.png','Sertifikat Seminar Kampus 3')">
+          <div class="cert-img-wrap">
+            <img src="sertifikat-marketing-3.png" alt="Sertifikat Seminar Kampus 3" width="400" height="200"
+                 onerror="this.parentElement.querySelector('.cert-fallback').style.display='flex';this.style.display='none';">
+            <div class="cert-fallback" style="display:none;" aria-hidden="true"><span style="font-size:3.5rem;">🎓</span><span>sertifikat-marketing-3.png</span></div>
+            <div class="cert-img-overlay" aria-hidden="true">🔍 Lihat Sertifikat</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-card-top"><div class="cert-icon" aria-hidden="true">🎓</div><span class="cert-badge completed">Completed</span></div>
+            <div class="cert-name">Sertifikat Seminar &amp; Kegiatan Kampus</div>
+            <div class="cert-platform">Politeknik APP Jakarta</div>
+            <div class="cert-year">2022 — 2025</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+ <!-- PORTFOLIO -->
+<section id="portfolio" aria-label="Portfolio karya">
+  <div class="container">
+    <div class="section-label" data-i18n="porto_label">Karya Saya</div>
+    <h2 class="section-title" data-i18n="porto_title">Portfolio <span>Terpilih</span></h2>
+
+    <div class="filter-tabs" role="group" aria-label="Filter portfolio">
+      <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Semua</button>
+      <button class="filter-btn" data-filter="web" data-i18n="filter_web">Website Development</button>
+      <button class="filter-btn" data-filter="brand" data-i18n="filter_brand">Brand &amp; Visual Design</button>
+      <button class="filter-btn" data-filter="creative" data-i18n="filter_creative">Creative &amp; Campaign</button>
+    </div>
+
+    <div class="portfolio-grid" id="portfolioGrid">
+
+      <!-- Web: PT Niagamas Setiausaha -->
+      <div class="porto-card" data-cat="web">
+        <div class="porto-thumb">
+          <img src="DOKUM%20PORTO/PT-NIAGAMAS-SETIAUSAHA.jpg" alt="Website PT Niagamas Setiausaha" loading="lazy" width="400" height="200" onerror="console.error('GAGAL LOAD: ' + this.src)">
+        </div>
+        <div class="porto-body">
+          <div class="porto-tag" data-i18n="tag_web">Website Development</div>
+          <div class="porto-title" data-i18n="pw1_title">Website PT Niagamas Setiausaha</div>
+          <div class="porto-desc" data-i18n="pw1_desc">Website profesional perusahaan yang saya bangun dari nol menggunakan HTML, CSS, dan JavaScript selama masa magang.</div>
+          <button class="porto-cs-btn" onclick="openModal('pw1')">📋 <span>Case Study</span></button>
+        </div>
+      </div>
+
+      <!-- Web: PT Power Elektrika Nusantara -->
+      <div class="porto-card" data-cat="web">
+        <div class="porto-thumb">
+          <img src="DOKUM%20PORTO/PT-PEN.png" alt="Website PT Power Elektrika Nusantara" loading="lazy" width="400" height="200" onerror="console.error('GAGAL LOAD: ' + this.src)">
+        </div>
+        <div class="porto-body">
+          <div class="porto-tag" data-i18n="tag_web">Website Development</div>
+          <div class="porto-title" data-i18n="pw2_title">Website PT Power Elektrika Nusantara</div>
+          <div class="porto-desc" data-i18n="pw2_desc">Website corporate perusahaan distribusi ketenagalistrikan yang saya kembangkan selama magang.</div>
+          <button class="porto-cs-btn" onclick="openModal('pw2')">📋 <span>Case Study</span></button>
+        </div>
+      </div>
+
+      <!-- Creative: Iklan TV Good Day -->
+      <div class="porto-card" data-cat="creative">
+        <div class="porto-thumb">
+          <img src="DOKUM%20PORTO/BTS.PNG" alt="Iklan TV Good Day — Behind the Scenes" loading="lazy" width="400" height="200" onerror="console.error('GAGAL LOAD: ' + this.src)">
+          <div class="porto-overlay" aria-hidden="true">👁 <span data-i18n="view">Lihat</span></div>
+        </div>
+        <div class="porto-body">
+          <div class="porto-tag" data-i18n="tag_talent">Creative Talent</div>
+          <div class="porto-title" data-i18n="pc1_title">Iklan TV Good Day</div>
+          <div class="porto-desc" data-i18n="pc1_desc">Penampilan sebagai talent kreatif dalam kampanye iklan televisi brand minuman kopi Good Day skala nasional.</div>
+        </div>
+      </div>
+
+      <!-- Creative: Kampanye Digital IndiHome -->
+      <div class="porto-card" data-cat="creative">
+        <div class="porto-thumb">
+          <img src="DOKUM%20PORTO/INDIHOME.PNG" alt="Kampanye Digital IndiHome Telkom" loading="lazy" width="400" height="200" onerror="console.error('GAGAL LOAD: ' + this.src)">
+          <div class="porto-overlay" aria-hidden="true">👁 <span data-i18n="view">Lihat</span></div>
+        </div>
+        <div class="porto-body">
+          <div class="porto-tag" data-i18n="tag_talent">Creative Talent</div>
+          <div class="porto-title" data-i18n="pc2_title">Kampanye Digital IndiHome</div>
+          <div class="porto-desc" data-i18n="pc2_desc">Penampilan sebagai talent dalam kampanye iklan digital IndiHome Telkom Indonesia.</div>
+        </div>
+      </div>
+
+      <!-- Creative: APP Fair -->
+      <div class="porto-card" data-cat="creative">
+        <div class="porto-thumb">
+          <img src="DOKUM%20PORTO/APPFAIR.PNG" alt="Festival APP Fair Politeknik APP Jakarta" loading="lazy" width="400" height="200" onerror="console.error('GAGAL LOAD: ' + this.src)">
+        </div>
+        <div class="porto-body">
+          <div class="porto-tag" data-i18n="tag_event">Event Management</div>
+          <div class="porto-title" data-i18n="pc3_title">Festival APP Fair — Koordinator Sponsorship</div>
+          <div class="porto-desc" data-i18n="pc3_desc">Memimpin tim koordinasi sponsorship untuk festival kampus APP Fair.</div>
+        </div>
+      </div>
+
+      <!-- Brand: Desain Poster -->
+      <div class="porto-card" data-cat="brand">
+        <div class="porto-thumb">
+          <img src="DOKUM%20PORTO/POSTER.PNG" alt="Desain Poster dan Konten Visual" loading="lazy" width="400" height="200" onerror="console.error('GAGAL LOAD: ' + this.src)">
+          <div class="porto-overlay" aria-hidden="true">👁 <span data-i18n="view">Lihat</span></div>
+        </div>
+        <div class="porto-body">
+          <div class="porto-tag" data-i18n="tag_visual">Visual Design</div>
+          <div class="porto-title" data-i18n="pb5_title">Desain Poster &amp; Konten Visual</div>
+          <div class="porto-desc" data-i18n="pb5_desc">Pembuatan desain poster, konten promosi, dan materi visual menggunakan Canva.</div>
+        </div>
+      </div>
+
+      <!-- Brand: Desain Kemeja -->
+      <div class="porto-card" data-cat="brand">
+        <div class="porto-thumb">
+          <img src="DOKUM%20PORTO/kemeja.png" alt="Desain Kemeja dan Merchandise Corporate" loading="lazy" width="400" height="200" onerror="console.error('GAGAL LOAD: ' + this.src)">
+          <div class="porto-overlay" aria-hidden="true">👁 <span data-i18n="view">Lihat</span></div>
+        </div>
+        <div class="porto-body">
+          <div class="porto-tag" data-i18n="tag_brand">Brand Identity</div>
+          <div class="porto-title" data-i18n="pb6_title">Desain Kemeja &amp; Merchandise Corporate</div>
+          <div class="porto-desc" data-i18n="pb6_desc">Perancangan desain kemeja dan merchandise perusahaan selama magang.</div>
+        </div>
+      </div>
+
+      <!-- Brand: Konten Sosial Media -->
+      <div class="porto-card" data-cat="brand">
+        <div class="porto-thumb">
+          <img src="DOKUM%20PORTO/instagram.png" alt="Desain Konten Sosial Media" loading="lazy" width="400" height="200" onerror="console.error('GAGAL LOAD: ' + this.src)">
+        </div>
+        <div class="porto-body">
+          <div class="porto-tag" data-i18n="tag_visual">Visual Design</div>
+          <div class="porto-title" data-i18n="pb7_title">Desain Konten Sosial Media</div>
+          <div class="porto-desc" data-i18n="pb7_desc">Pembuatan konten visual untuk Instagram, TikTok, dan LinkedIn.</div>
+        </div>
+      </div>
+
+      <!-- Brand: Visual Identity -->
+      <div class="porto-card" data-cat="brand">
+        <div class="porto-thumb">
+          <img src="DOKUM%20PORTO/banner-spanduk.png" alt="Visual Identity dan Branding Assets" loading="lazy" width="400" height="200" onerror="console.error('GAGAL LOAD: ' + this.src)">
+        </div>
+        <div class="porto-body">
+          <div class="porto-tag" data-i18n="tag_brand">Brand Identity</div>
+          <div class="porto-title" data-i18n="pb8_title">Visual Identity &amp; Branding Assets</div>
+          <div class="porto-desc" data-i18n="pb8_desc">Pengembangan aset visual identitas brand: kop surat, kartu nama, banner promosi.</div>
+        </div>
+      </div>
+
+    </div><!-- /.portfolio-grid -->
+
+    <div class="mini-contact-bar">
+      <div class="mcb-text" data-i18n="mcb_text">Tertarik berkolaborasi? <strong>Mari diskusikan project Anda!</strong></div>
+      <div class="mcb-links">
+        <a href="https://wa.me/6281188001580" target="_blank" rel="noopener noreferrer" class="mcb-link">💬 WhatsApp</a>
+        <a href="mailto:ferdialghafurr87@gmail.com" class="mcb-link">📧 Email</a>
+      </div>
+    </div>
+
+  </div><!-- /.container -->
+</section>
+
+  <!-- VIDEO KARYA -->
+  <!-- FIX #2 VIDEO: preload="none" + autoplay logic via IntersectionObserver -->
+  <section id="video-karya" aria-label="Video karya kreatif">
+    <div class="container">
+      <div class="section-label" data-i18n="video_label">Video Karya</div>
+      <h2 class="section-title" data-i18n="video_title">Video <span>Karya Saya</span></h2>
+      <p class="video-intro" data-i18n="video_intro">Pengalaman saya di depan kamera sebagai talent dalam kampanye iklan brand nasional.</p>
+      <div class="video-grid">
+
+        <!-- VIDEO 1: Good Day -->
+        <div class="video-card" id="videoCard1">
+          <span class="video-badge" data-i18n="vid_badge">National Campaign</span>
+          <div class="video-player-wrap" id="vwrap1">
+            <!-- FIX #6: preload="none" — hemat bandwidth, IO trigger autoplay -->
+            <video id="vid1" preload="none" playsinline muted loop>
+              <source src="good-day.mp4" type="video/mp4">
+            </video>
+            <div class="video-loading hidden" id="vload1" aria-hidden="true"><div class="loading-spinner"></div></div>
+            <div class="play-overlay visible" id="overlay1" onclick="togglePlay('vid1','overlay1','vload1')" role="button" aria-label="Putar video Good Day">
+              <div class="play-icon" aria-hidden="true">▶</div>
+            </div>
+            <div class="video-error-overlay" id="verror1" role="alert">
+              <div class="video-error-icon" aria-hidden="true">🎬</div>
+              <div class="video-error-text">File video tidak ditemukan di folder lokal.</div>
+              <div class="video-error-actions">
+                <button class="video-error-play-btn" onclick="retryVideoLoad('vid1','overlay1','vload1','verror1')">▶ Coba Putar Ulang</button>
+                <a href="https://drive.google.com/file/d/10OCNxOJtqV4-hnZBWYoDLis506YmdnmD/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="video-error-link">☁ Tonton Iklan Good Day di Drive</a>
+              </div>
+            </div>
+            <!-- FIX #14: aria-label mute button -->
+            <button class="mute-btn" id="muteBtn1" onclick="toggleMute('vid1','muteBtn1')" aria-label="Aktifkan atau matikan suara video Good Day">🔇</button>
+          </div>
+          <div class="video-body">
+            <div class="video-tag" data-i18n="tag_talent">Creative Talent</div>
+            <div class="video-title" data-i18n="vid1_title">Iklan Good Day</div>
+            <div class="video-desc" data-i18n="vid1_desc">Penampilan saya sebagai talent dalam iklan TV Good Day skala nasional.</div>
+            <div class="video-actions">
+              <button class="video-play-native-btn" onclick="togglePlay('vid1','overlay1','vload1')">▶ Play / Pause</button>
+              <a href="https://drive.google.com/file/d/10OCNxOJtqV4-hnZBWYoDLis506YmdnmD/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="video-alt-btn">☁ <span data-i18n="vid_watch">Tonton di Drive</span></a>
+            </div>
+            <div class="video-status" id="status1"><span class="status-dot" aria-hidden="true"></span><span id="statusText1">Siap — scroll untuk autoplay</span></div>
+          </div>
+        </div>
+
+        <!-- VIDEO 2: IndiHome -->
+        <div class="video-card" id="videoCard2">
+          <span class="video-badge" data-i18n="vid_badge">National Campaign</span>
+          <div class="video-player-wrap" id="vwrap2">
+            <video id="vid2" preload="none" playsinline muted loop>
+              <source src="indihome.mp4" type="video/mp4">
+            </video>
+            <div class="video-loading hidden" id="vload2" aria-hidden="true"><div class="loading-spinner"></div></div>
+            <div class="play-overlay visible" id="overlay2" onclick="togglePlay('vid2','overlay2','vload2')" role="button" aria-label="Putar video IndiHome">
+              <div class="play-icon" aria-hidden="true">▶</div>
+            </div>
+            <div class="video-error-overlay" id="verror2" role="alert">
+              <div class="video-error-icon" aria-hidden="true">🎬</div>
+              <div class="video-error-text">File video tidak ditemukan di folder lokal.</div>
+              <div class="video-error-actions">
+                <button class="video-error-play-btn" onclick="retryVideoLoad('vid2','overlay2','vload2','verror2')">▶ Coba Putar Ulang</button>
+                <a href="https://drive.google.com/file/d/1MUbcWZMJ1U0ICFRXT0c1irnRFKTq54ii/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="video-error-link">☁ Tonton Iklan IndiHome di Drive</a>
+              </div>
+            </div>
+            <button class="mute-btn" id="muteBtn2" onclick="toggleMute('vid2','muteBtn2')" aria-label="Aktifkan atau matikan suara video IndiHome">🔇</button>
+          </div>
+          <div class="video-body">
+            <div class="video-tag" data-i18n="tag_talent">Creative Talent</div>
+            <div class="video-title" data-i18n="vid2_title">Iklan IndiHome</div>
+            <div class="video-desc" data-i18n="vid2_desc">Penampilan saya sebagai talent dalam kampanye digital IndiHome Telkom Indonesia.</div>
+            <div class="video-actions">
+              <button class="video-play-native-btn" onclick="togglePlay('vid2','overlay2','vload2')">▶ Play / Pause</button>
+              <a href="https://drive.google.com/file/d/1MUbcWZMJ1U0ICFRXT0c1irnRFKTq54ii/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="video-alt-btn">☁ <span data-i18n="vid_watch">Tonton di Drive</span></a>
+            </div>
+            <div class="video-status" id="status2"><span class="status-dot" aria-hidden="true"></span><span id="statusText2">Siap — scroll untuk autoplay</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS & SERVICES -->
+  <section id="skills" aria-label="Keahlian dan layanan">
+    <div class="container">
+      <div class="skills-hero-text">
+        <div class="section-label" data-i18n="skills_label">Keahlian &amp; Layanan</div>
+        <h2 class="section-title" data-i18n="skills_title">Bagaimana Saya Dapat<br><span>Menumbuhkan Bisnis Anda</span></h2>
+        <p data-i18n="skills_desc">Di era digital yang kompetitif ini, saya hadir sebagai mitra strategis yang membantu bisnis Anda tumbuh melalui pendekatan digital yang terukur, kreatif, dan berorientasi hasil.</p>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar-card"><span class="pillar-icon" aria-hidden="true">🌐</span><div class="pillar-title" data-i18n="pillar1_title">Web Development</div><p class="pillar-desc" data-i18n="pillar1_desc">Membangun website profesional yang cepat, responsif, dan SEO-friendly.</p></div>
+        <div class="pillar-card"><span class="pillar-icon" aria-hidden="true">📊</span><div class="pillar-title" data-i18n="pillar2_title">Digital Marketing</div><p class="pillar-desc" data-i18n="pillar2_desc">Strategi pemasaran digital komprehensif meliputi SEO, social media, content creation, dan analitik data.</p></div>
+        <div class="pillar-card"><span class="pillar-icon" aria-hidden="true">🎨</span><div class="pillar-title" data-i18n="pillar3_title">Brand Identity Design</div><p class="pillar-desc" data-i18n="pillar3_desc">Perancangan identitas merek yang kuat — dari logo hingga sistem visual lengkap.</p></div>
+      </div>
+      <div class="workflow-title" data-i18n="workflow_title">Alur Kerja Profesional Saya</div>
+      <div class="workflow-steps">
+        <div class="workflow-step"><div class="ws-num" aria-hidden="true">01</div><span class="ws-icon" aria-hidden="true">🔍</span><div class="ws-label" data-i18n="ws1">Riset &amp; Discovery</div></div>
+        <div class="workflow-step"><div class="ws-num" aria-hidden="true">02</div><span class="ws-icon" aria-hidden="true">💡</span><div class="ws-label" data-i18n="ws2">Strategi &amp; Konsep</div></div>
+        <div class="workflow-step"><div class="ws-num" aria-hidden="true">03</div><span class="ws-icon" aria-hidden="true">🎨</span><div class="ws-label" data-i18n="ws3">Desain &amp; Kreatif</div></div>
+        <div class="workflow-step"><div class="ws-num" aria-hidden="true">04</div><span class="ws-icon" aria-hidden="true">⚙️</span><div class="ws-label" data-i18n="ws4">Development</div></div>
+        <div class="workflow-step"><div class="ws-num" aria-hidden="true">05</div><span class="ws-icon" aria-hidden="true">✅</span><div class="ws-label" data-i18n="ws5">Testing &amp; QA</div></div>
+        <div class="workflow-step"><div class="ws-num" aria-hidden="true">06</div><span class="ws-icon" aria-hidden="true">🚀</span><div class="ws-label" data-i18n="ws6">Launch &amp; Support</div></div>
+      </div>
+      <div class="skills-clipper">
+        <div class="skill-clip-card">
+          <div class="skill-clip-title" data-i18n="hard_skills">⚡ Hard Skills</div>
+          <div class="skill-bar"><div class="skill-bar-top"><span>Digital Marketing Strategy</span><span>88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div></div>
+          <div class="skill-bar"><div class="skill-bar-top"><span>Web Development (HTML/CSS/JS)</span><span>82%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div></div>
+          <div class="skill-bar"><div class="skill-bar-top"><span>Canva &amp; Design Tools</span><span>92%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div></div>
+          <div class="skill-bar"><div class="skill-bar-top"><span>Social Media Management</span><span>85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div></div>
+          <div class="skill-bar"><div class="skill-bar-top"><span>AI Tools (Claude, ChatGPT, etc)</span><span>88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div></div>
+          <div class="skill-bar"><div class="skill-bar-top"><span>Content Creation &amp; Video</span><span>80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div></div>
+        </div>
+        <div class="skill-clip-card">
+          <div class="skill-clip-title" data-i18n="soft_skills">🧠 Soft Skills</div>
+          <div class="skill-bar"><div class="skill-bar-top"><span>Creative Problem Solving</span><span>92%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div></div>
+          <div class="skill-bar"><div class="skill-bar-top"><span data-i18n="sk_comm">Komunikasi Profesional</span><span>88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div></div>
+          <div class="skill-bar"><div class="skill-bar-top"><span>Teamwork &amp; Leadership</span><span>90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div></div>
+          <div class="skill-bar"><div class="skill-bar-top"><span data-i18n="sk_adapt">Adaptabilitas &amp; Learning</span><span>95%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div></div>
+          <div class="skill-bar"><div class="skill-bar-top"><span>Time Management</span><span>85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div></div>
+          <div class="skill-bar"><div class="skill-bar-top"><span>Remote Work Efficiency</span><span>93%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="93"></div></div></div>
+        </div>
+      </div>
+      <div class="stats-strip">
+        <div class="stats-item"><div class="stats-num" data-target="2">0</div><div class="stats-label" data-i18n="stat_companies">Perusahaan Magang</div></div>
+        <div class="stats-item"><div class="stats-num" data-target="6">0</div><div class="stats-label" data-i18n="stat_projects">Project Diselesaikan</div></div>
+        <div class="stats-item"><div class="stats-num" data-target="10">0</div><div class="stats-label" data-i18n="stat_tools">Tools Dikuasai</div></div>
+        <div class="stats-item"><div class="stats-num" data-target="3">0</div><div class="stats-label" data-i18n="stat_years">Tahun Belajar</div></div>
+      </div>
+      <div class="faq-title" data-i18n="faq_title">Pertanyaan yang Sering Diajukan</div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="faq1_q">Apakah Anda tersedia untuk bekerja secara remote?</span><span class="faq-arrow" aria-hidden="true">+</span></button><div class="faq-a" data-i18n="faq1_a">Ya! Saya terbiasa bekerja dengan klien dari berbagai daerah dan negara.</div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="faq2_q">Berapa lama waktu pengerjaan website?</span><span class="faq-arrow" aria-hidden="true">+</span></button><div class="faq-a" data-i18n="faq2_a">Landing page: 3-7 hari. Website company profile: 1-2 minggu.</div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="faq3_q">Apa saja layanan digital marketing yang Anda tawarkan?</span><span class="faq-arrow" aria-hidden="true">+</span></button><div class="faq-a" data-i18n="faq3_a">Strategi konten media sosial, SEO on-page, pembuatan konten visual, dan analisis performa.</div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="faq4_q">Tools apa yang Anda gunakan dalam proses desain?</span><span class="faq-arrow" aria-hidden="true">+</span></button><div class="faq-a" data-i18n="faq4_a">Canva, VS Code, Claude AI, Midjourney, Gemini, CapCut, Kling AI.</div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="faq5_q">Apakah ada revisi setelah project selesai?</span><span class="faq-arrow" aria-hidden="true">+</span></button><div class="faq-a" data-i18n="faq5_a">Ya, setiap project mencakup sesi revisi untuk memastikan klien puas.</div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="faq6_q">Bagaimana proses pembayaran dan sistem kerja?</span><span class="faq-arrow" aria-hidden="true">+</span></button><div class="faq-a" data-i18n="faq6_a">DP 50% di awal, pelunasan setelah project selesai. Via transfer bank atau dompet digital.</div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="faq7_q">Apakah Anda bisa mengerjakan project dalam Bahasa Inggris?</span><span class="faq-arrow" aria-hidden="true">+</span></button><div class="faq-a" data-i18n="faq7_a">Ya, saya dapat bekerja dalam Bahasa Indonesia maupun Bahasa Inggris.</div></div>
+      </div>
+      <div class="skills-cta">
+        <h3 data-i18n="cta_title">Siap Mulai Project Bersama Saya?</h3>
+        <p data-i18n="cta_desc">Hubungi saya sekarang dan dapatkan konsultasi gratis untuk project digital Anda.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="https://wa.me/6281188001580" target="_blank" rel="noopener noreferrer" class="btn-primary" data-i18n="cta_wa">💬 Chat di WhatsApp</a>
+          <a href="#contact" class="btn-outline" data-i18n="cta_email">📧 Kirim Pesan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+<section id="contact" aria-label="Kontak dan kolaborasi">
+  <div class="container">
+
+    <!-- HEADER -->
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div class="section-label" style="justify-content:center;" data-i18n="contact_label">Hubungi Saya</div>
+      <h2 class="section-title" style="text-align:center;" data-i18n="contact_title">Mari <span>Berkolaborasi</span></h2>
+      <p style="color:var(--white-dim);max-width:500px;margin:1rem auto;" data-i18n="contact_desc">Saya selalu terbuka untuk diskusi project baru, peluang kolaborasi, atau sekadar berbincang tentang dunia digital.</p>
+    </div>
+
+    <!-- CARD UTAMA — SINGLE CENTERED BOX -->
+    <div style="max-width:900px;margin:0 auto;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:24px;padding:2.5rem;backdrop-filter:blur(12px);box-shadow:var(--neon-shadow);">
+
+      <!-- STATUS OTW + LOKASI -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem;">
+
+        <div style="display:flex;align-items:flex-start;gap:.8rem;padding:1rem 1.2rem;
+          background:rgba(0,255,136,0.06);border:1px solid rgba(0,255,136,0.25);
+          border-radius:14px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:#00ff88;
+            flex-shrink:0;margin-top:.3rem;
+            animation:green-pulse 1.8s ease-in-out infinite;"></div>
+          <div style="font-size:.88rem;color:var(--white-dim);line-height:1.6;">
+            Saat ini <strong style="color:#00ff88;">aktif mencari peluang</strong> sebagai Digital Marketer, Web Developer &amp; Creative
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:.8rem;padding:1rem 1.2rem;
+          background:rgba(0,245,255,0.05);border:1px solid rgba(0,245,255,0.18);
+          border-radius:14px;">
+          <span style="font-size:1.3rem;flex-shrink:0;">📍</span>
+          <div>
+            <div style="color:var(--white);font-size:.88rem;font-weight:600;">Jakarta, Indonesia (GMT+7)</div>
+            <div style="color:var(--white-dim);font-size:.78rem;margin-top:.1rem;">Remote worldwide · On-site Jabodetabek</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TOMBOL WA UTAMA -->
+      <a href="https://wa.me/6281188001580" target="_blank" rel="noopener noreferrer"
+        style="display:flex;align-items:center;justify-content:center;gap:.8rem;
+        width:100%;padding:1rem;background:var(--green-wa);border:none;border-radius:12px;
+        color:#fff;font-family:var(--font-body);font-weight:700;font-size:1rem;
+        text-decoration:none;transition:var(--transition);
+        box-shadow:0 0 24px rgba(37,211,102,.35);margin-bottom:1.8rem;letter-spacing:.5px;"
+        onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 0 40px rgba(37,211,102,.6)'"
+        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 0 24px rgba(37,211,102,.35)'">
+        💬 Chat via WhatsApp Sekarang
+      </a>
+
+      <!-- DIVIDER LABEL -->
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+        <div style="flex:1;height:1px;background:var(--glass-border);"></div>
+        <span style="font-family:var(--font-ui);font-size:.7rem;letter-spacing:3px;
+          color:var(--cyan);text-transform:uppercase;">Informasi Kontak</span>
+        <div style="flex:1;height:1px;background:var(--glass-border);"></div>
+      </div>
+
+      <!-- GRID KONTAK 3 KOLOM -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.8rem;">
+
+        <!-- Email -->
+        <a href="mailto:ferdialghafurr87@gmail.com"
+          style="display:flex;flex-direction:column;align-items:center;text-align:center;
+          gap:.6rem;padding:1.2rem 1rem;background:rgba(0,245,255,0.04);
+          border:1px solid rgba(0,245,255,0.15);border-radius:14px;
+          text-decoration:none;color:var(--white);transition:var(--transition);"
+          onmouseover="this.style.borderColor='var(--cyan)';this.style.transform='translateY(-4px)';this.style.boxShadow='var(--neon-shadow)'"
+          onmouseout="this.style.borderColor='rgba(0,245,255,0.15)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+          <div style="width:44px;height:44px;border-radius:10px;background:rgba(0,245,255,.1);
+            display:flex;align-items:center;justify-content:center;font-size:1.3rem;">📧</div>
+          <div>
+            <div style="font-size:.65rem;letter-spacing:2px;color:var(--cyan);
+              text-transform:uppercase;font-family:var(--font-ui);margin-bottom:.2rem;">Email</div>
+            <div style="font-size:.78rem;font-weight:600;word-break:break-all;line-height:1.4;">ferdialghafurr87@gmail.com</div>
+          </div>
+        </a>
+
+        <!-- Telepon -->
+        <a href="tel:+6281188001580"
+          style="display:flex;flex-direction:column;align-items:center;text-align:center;
+          gap:.6rem;padding:1.2rem 1rem;background:rgba(0,245,255,0.04);
+          border:1px solid rgba(0,245,255,0.15);border-radius:14px;
+          text-decoration:none;color:var(--white);transition:var(--transition);"
+          onmouseover="this.style.borderColor='var(--cyan)';this.style.transform='translateY(-4px)';this.style.boxShadow='var(--neon-shadow)'"
+          onmouseout="this.style.borderColor='rgba(0,245,255,0.15)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+          <div style="width:44px;height:44px;border-radius:10px;background:rgba(0,245,255,.1);
+            display:flex;align-items:center;justify-content:center;font-size:1.3rem;">📞</div>
+          <div>
+            <div style="font-size:.65rem;letter-spacing:2px;color:var(--cyan);
+              text-transform:uppercase;font-family:var(--font-ui);margin-bottom:.2rem;">Telepon</div>
+            <div style="font-size:.82rem;font-weight:600;">+62 811-8800-1580</div>
+          </div>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/6281188001580" target="_blank" rel="noopener noreferrer"
+          style="display:flex;flex-direction:column;align-items:center;text-align:center;
+          gap:.6rem;padding:1.2rem 1rem;background:rgba(37,211,102,0.05);
+          border:1px solid rgba(37,211,102,0.2);border-radius:14px;
+          text-decoration:none;color:var(--white);transition:var(--transition);"
+          onmouseover="this.style.borderColor='#25D366';this.style.transform='translateY(-4px)';this.style.boxShadow='0 0 20px rgba(37,211,102,0.4)'"
+          onmouseout="this.style.borderColor='rgba(37,211,102,0.2)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+          <div style="width:44px;height:44px;border-radius:10px;background:#25D366;
+            display:flex;align-items:center;justify-content:center;font-size:1.3rem;">💬</div>
+          <div>
+            <div style="font-size:.65rem;letter-spacing:2px;color:#25D366;
+              text-transform:uppercase;font-family:var(--font-ui);margin-bottom:.2rem;">WhatsApp</div>
+            <div style="font-size:.82rem;font-weight:600;">+62 811-8800-1580</div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- DIVIDER LABEL SOSMED -->
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+        <div style="flex:1;height:1px;background:var(--glass-border);"></div>
+        <span style="font-family:var(--font-ui);font-size:.7rem;letter-spacing:3px;
+          color:var(--cyan);text-transform:uppercase;">Social Media</span>
+        <div style="flex:1;height:1px;background:var(--glass-border);"></div>
+      </div>
+
+      <!-- GRID SOSMED 3 KOLOM -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.8rem;">
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/ferdi_alghafar" target="_blank" rel="noopener noreferrer"
+          style="display:flex;flex-direction:column;align-items:center;text-align:center;
+          gap:.6rem;padding:1.2rem 1rem;background:rgba(0,245,255,0.04);
+          border:1px solid rgba(0,245,255,0.15);border-radius:14px;
+          text-decoration:none;color:var(--white);transition:var(--transition);"
+          onmouseover="this.style.borderColor='#E1306C';this.style.transform='translateY(-4px)';this.style.boxShadow='0 0 20px rgba(225,48,108,0.35)'"
+          onmouseout="this.style.borderColor='rgba(0,245,255,0.15)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+          <div style="width:44px;height:44px;border-radius:10px;flex-shrink:0;
+            background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+            display:flex;align-items:center;justify-content:center;font-size:1.3rem;">📸</div>
+          <div>
+            <div style="font-size:.65rem;letter-spacing:2px;color:#E1306C;
+              text-transform:uppercase;font-family:var(--font-ui);margin-bottom:.2rem;">Instagram</div>
+            <div style="font-size:.8rem;font-weight:600;">@ferdi_alghafar</div>
+          </div>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@ferdialghafarr" target="_blank" rel="noopener noreferrer"
+          style="display:flex;flex-direction:column;align-items:center;text-align:center;
+          gap:.6rem;padding:1.2rem 1rem;background:rgba(0,245,255,0.04);
+          border:1px solid rgba(0,245,255,0.15);border-radius:14px;
+          text-decoration:none;color:var(--white);transition:var(--transition);"
+          onmouseover="this.style.borderColor='#69C9D0';this.style.transform='translateY(-4px)';this.style.boxShadow='0 0 20px rgba(105,201,208,0.35)'"
+          onmouseout="this.style.borderColor='rgba(0,245,255,0.15)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+          <div style="width:44px;height:44px;border-radius:10px;flex-shrink:0;
+            background:#010101;border:1px solid rgba(105,201,208,0.5);
+            display:flex;align-items:center;justify-content:center;font-size:1.3rem;">🎵</div>
+          <div>
+            <div style="font-size:.65rem;letter-spacing:2px;color:#69C9D0;
+              text-transform:uppercase;font-family:var(--font-ui);margin-bottom:.2rem;">TikTok</div>
+            <div style="font-size:.8rem;font-weight:600;">@ferdialghafarr</div>
+          </div>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/ferdialgafar" target="_blank" rel="noopener noreferrer"
+          style="display:flex;flex-direction:column;align-items:center;text-align:center;
+          gap:.6rem;padding:1.2rem 1rem;background:rgba(0,245,255,0.04);
+          border:1px solid rgba(0,245,255,0.15);border-radius:14px;
+          text-decoration:none;color:var(--white);transition:var(--transition);"
+          onmouseover="this.style.borderColor='#0A66C2';this.style.transform='translateY(-4px)';this.style.boxShadow='0 0 20px rgba(10,102,194,0.45)'"
+          onmouseout="this.style.borderColor='rgba(0,245,255,0.15)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+          <div style="width:44px;height:44px;border-radius:10px;flex-shrink:0;
+            background:#0A66C2;
+            display:flex;align-items:center;justify-content:center;font-size:1.3rem;">💼</div>
+          <div>
+            <div style="font-size:.65rem;letter-spacing:2px;color:#4A9FE2;
+              text-transform:uppercase;font-family:var(--font-ui);margin-bottom:.2rem;">LinkedIn</div>
+            <div style="font-size:.8rem;font-weight:600;">ferdialgafar</div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- JAM AKTIF — FULL WIDTH BAWAH -->
+      <div style="display:flex;align-items:center;gap:1rem;padding:1rem 1.4rem;
+        background:rgba(0,255,136,0.05);border:1px solid rgba(0,255,136,0.2);
+        border-radius:12px;">
+        <div style="width:42px;height:42px;border-radius:10px;background:rgba(0,255,136,.1);
+          display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">
+          🕐
+        </div>
+        <div style="flex:1;">
+          <div style="font-size:.65rem;letter-spacing:2px;color:#00ff88;
+            text-transform:uppercase;font-family:var(--font-ui);margin-bottom:.2rem;">
+            Jam Aktif
+          </div>
+          <div style="color:var(--white);font-size:.9rem;font-weight:600;">
+            Senin – Sabtu, 08.00 – 21.00 WIB
+          </div>
+        </div>
+        <div style="color:var(--white-dim);font-size:.82rem;text-align:right;line-height:1.5;">
+          ⚡ Respon WA<br>biasanya &lt; 1 jam
+        </div>
+      </div>
+
+    </div><!-- end card utama -->
+  </div><!-- end container -->
+</section>
+
+  <!-- EXTENDED ABOUT / STORY -->
+  <section id="extended-about" aria-label="Cerita perjalanan Ferdi Algafar">
+    <div class="container">
+      <div class="section-label" data-i18n="story_label">Cerita Saya</div>
+      <h2 class="section-title" data-i18n="story_title">Lebih Dalam Tentang <span>Perjalanan Saya</span></h2>
+      <div class="ext-about-grid">
+        <div class="ext-story">
+          <p data-i18n="story_p1">Perjalanan saya di dunia digital dimulai dari bangku kuliah di <strong>Politeknik APP Jakarta</strong>, Jurusan <strong>Manajemen Pemasaran Industri Elektronika</strong>.</p>
+          <p data-i18n="story_p2">Selama masa kuliah, saya aktif mengeksplorasi dunia desain grafis, coding, dan pemasaran digital secara mandiri.</p>
+          <p data-i18n="story_p3">Momen penting pertama datang ketika saya magang di <strong>PT Niagamas Setiausaha &amp; PT Power Elektrika Nusantara</strong> sebagai Digital Marketer dan Web Developer.</p>
+          <p data-i18n="story_p4">Di sela karier digital, saya juga menjejaki dunia kreatif sebagai <strong>Creative Talent</strong> — tampil dalam iklan TV brand ternama seperti <strong>Good Day</strong> dan <strong>IndiHome</strong>.</p>
+          <p data-i18n="story_p5">Sebagai <strong>Koordinator Sponsorship</strong> di Festival APP Fair, saya belajar tentang kepemimpinan, negosiasi, dan membangun hubungan jangka panjang.</p>
+          <p data-i18n="story_p6">Hari ini, saya berdiri sebagai profesional digital yang siap memberikan dampak nyata. Kombinasi kreativitas, teknologi, dan strategi yang tepat adalah kunci kesuksesan di era digital.</p>
+        </div>
+        <div>
+          <div class="section-label" style="margin-bottom:1.2rem;" data-i18n="values_label">Core Values Saya</div>
+          <div class="core-values">
+            <div class="value-item"><span class="value-icon" aria-hidden="true">⚡</span><div class="value-text"><strong data-i18n="val1_t">Fast Delivery</strong><span data-i18n="val1_d">Tepat waktu tanpa kompromi pada kualitas</span></div></div>
+            <div class="value-item"><span class="value-icon" aria-hidden="true">🤝</span><div class="value-text"><strong data-i18n="val2_t">Honest Communication</strong><span data-i18n="val2_d">Transparansi penuh di setiap tahap project</span></div></div>
+            <div class="value-item"><span class="value-icon" aria-hidden="true">💎</span><div class="value-text"><strong data-i18n="val3_t">Quality First</strong><span data-i18n="val3_d">Output terbaik adalah standar minimum saya</span></div></div>
+            <div class="value-item"><span class="value-icon" aria-hidden="true">📚</span><div class="value-text"><strong data-i18n="val4_t">Continuous Learning</strong><span data-i18n="val4_d">Selalu update dengan tren dan teknologi terbaru</span></div></div>
+            <div class="value-item"><span class="value-icon" aria-hidden="true">❤️</span><div class="value-text"><strong data-i18n="val5_t">Client Obsessed</strong><span data-i18n="val5_d">Kepuasan klien adalah prioritas utama saya</span></div></div>
+          </div>
+          <div style="margin-top:2rem;padding:1.5rem;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:16px;backdrop-filter:blur(8px);">
+            <p style="color:var(--cyan);font-family:var(--font-head);font-size:.9rem;margin-bottom:.5rem;">🎓 <span data-i18n="edu_label">Pendidikan</span></p>
+            <p style="color:var(--white);font-weight:600;font-size:.95rem;">Politeknik APP Jakarta</p>
+            <p style="color:var(--white-dim);font-size:.85rem;margin-top:.2rem;" data-i18n="edu_major">Manajemen Pemasaran Industri Elektronika</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-logo">FERDI ALGAFAR</div>
+      <p class="footer-tagline" data-i18n="footer_tagline">Digital Marketer · Web Developer · Creative</p>
+      <div class="footer-socials">
+        <a href="mailto:ferdialghafurr87@gmail.com" class="footer-social" aria-label="Email Ferdi Algafar">📧</a>
+        <a href="https://wa.me/6281188001580" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="WhatsApp Ferdi Algafar">💬</a>
+        <a href="https://www.instagram.com/ferdi_alghafar" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Instagram Ferdi Algafar">📸</a>
+        <a href="https://www.tiktok.com/@ferdialghafarr" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="TikTok Ferdi Algafar">🎵</a>
+        <a href="https://www.linkedin.com/in/ferdialgafar" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="LinkedIn Ferdi Algafar">💼</a>
+      </div>
+      <p class="footer-copy">© 2026 <span>FERDI ALGAFAR</span>. <span data-i18n="footer_copy">Dibuat dengan ❤️ dan banyak ☕ — All Rights Reserved.</span></p>
+    </div>
+  </footer>
+
+<!-- ================================================
+     JAVASCRIPT
+================================================ -->
+<script src="script.js"></script>
+</body>
+</html>
