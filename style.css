@@ -578,6 +578,14 @@
     .cert-name { font-family: var(--font-head); font-size: .9rem; font-weight: 700; color: var(--white); margin-bottom: .3rem; line-height: 1.3; }
     .cert-platform { font-size: .82rem; color: var(--blue); font-weight: 500; margin-bottom: .3rem; }
     .cert-year { font-family: var(--font-ui); font-size: .75rem; color: var(--white-dim); letter-spacing: 1px; }
+    .cert-verify-link {
+      display: inline-flex; align-items: center; gap: .35rem; margin-top: .8rem;
+      font-family: var(--font-ui); font-size: .72rem; letter-spacing: .5px;
+      color: var(--cyan); text-decoration: none; padding: .4rem .8rem;
+      border: 1px solid rgba(0,245,255,0.35); border-radius: 8px;
+      background: rgba(0,245,255,0.05); transition: var(--transition);
+    }
+    .cert-verify-link:hover { background: rgba(0,245,255,0.15); border-color: var(--cyan); box-shadow: 0 0 14px rgba(0,245,255,0.35); }
 
     /* ================================================
        PORTFOLIO

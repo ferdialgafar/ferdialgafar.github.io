@@ -399,6 +399,12 @@ const caseStudies = {
     problem: 'Event musik kampus JECTFEST 2024 membutuhkan manajemen logistik dan perlengkapan yang terorganisir untuk memastikan semua kebutuhan operasional tersedia tepat waktu dan sesuai standar.',
     process: 'Mengkoordinasikan seluruh kebutuhan perlengkapan dan logistik event dari tahap perencanaan hingga pelaksanaan. Berkoordinasi aktif dengan tim keamanan, dekorasi, dan sponsor. Memantau progress persiapan, mengelola hubungan dengan vendor, dan memastikan dokumentasi kegiatan berjalan baik.',
     result: 'Event musik JECTFEST 2024 berjalan lancar dengan seluruh kebutuhan operasional dan logistik terpenuhi sesuai rencana. Mendapat pengalaman berharga dalam manajemen event dan koordinasi multi-tim.'
+  },
+  googleads1: {
+    title: 'Case Study — Google Ads & AI-Powered Performance Ads Certification',
+    problem: 'Untuk bersaing sebagai digital marketer profesional, dibutuhkan validasi kompetensi resmi dalam merancang dan mengoptimalkan kampanye iklan digital, termasuk pemanfaatan teknologi AI yang kini menjadi standar industri Google Ads.',
+    process: 'Mengikuti pelatihan dan ujian sertifikasi resmi di Google Skillshop, mempelajari strategi targeting audiens, optimasi iklan display, serta pemanfaatan fitur AI-Powered Performance Ads untuk meningkatkan efektivitas dan efisiensi kampanye.',
+    result: 'Berhasil meraih dua sertifikasi resmi Google: Google Ads Display Certification dan AI-Powered Performance Ads Certification (berlaku 2026 — 2027), memperkuat kredibilitas sebagai digital marketer yang kompeten dalam advertising berbasis data dan AI.'
   }
 };
 
