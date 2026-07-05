@@ -45,6 +45,9 @@ const translations = {
     pillar4_title:'AI &amp; Video Content Creation', pillar4_desc:'Memproduksi konten video berbasis AI menggunakan Leonardo AI, Kling Video, CapCut, dan Canva untuk kampanye digital yang impactful.',
     exp5_title:'Content Creator &amp; AI Video Editor', exp5_desc:'Mengelola dan mengembangkan akun TikTok yang berfokus pada konten video berbasis AI. Menggunakan tools Leonardo AI, Kling Video, Canva, dan CapCut untuk produksi konten kreatif berkualitas tinggi.',
     exp6_title:'Divisi Perlengkapan — Event Music JECTFEST', exp6_desc:'Mengatur kebutuhan operasional, perlengkapan, dan logistik acara. Berkoordinasi dengan tim keamanan, dekorasi, dan sponsor untuk kelancaran event.',
+    exp7_title:'TikTok Affiliate Content Creator', exp7_desc:'Mengelola dan memproduksi konten video affiliate marketing di TikTok untuk niche fashion &amp; lifestyle (quiet luxury, OOTD, styling tips). Bertanggung jawab atas ide konten, pengambilan gambar, editing, hingga penempatan link produk TikTok Shop agar konversi penjualan maksimal.',
+    tag_affiliate:'Affiliate Marketing',
+    pta1_title:'TikTok Affiliate — Fashion &amp; Lifestyle Content', pta1_desc:'Mengelola konten affiliate marketing TikTok Shop untuk niche fashion &amp; lifestyle bertema quiet luxury. Memproduksi video OOTD, styling tips, dan review produk yang mendorong engagement serta konversi penjualan melalui link TikTok Shop.',
     workflow_title:'Alur Kerja Profesional Saya',
     ws1:'Riset &amp; Discovery', ws2:'Strategi &amp; Konsep', ws3:'Desain &amp; Kreatif', ws4:'Development', ws5:'Testing &amp; QA', ws6:'Launch &amp; Support',
     hard_skills:'⚡ Hard Skills', soft_skills:'🧠 Soft Skills', sk_comm:'Komunikasi Profesional', sk_adapt:'Adaptabilitas &amp; Learning',
@@ -120,6 +123,9 @@ const translations = {
     pillar4_title:'AI &amp; Video Content Creation', pillar4_desc:'Producing AI-based video content using Leonardo AI, Kling Video, CapCut, and Canva for impactful digital campaigns.',
     exp5_title:'Content Creator &amp; AI Video Editor', exp5_desc:'Managing and growing a TikTok account focused on AI-based video content. Using Leonardo AI, Kling Video, Canva, and CapCut to produce high-quality creative content.',
     exp6_title:'Equipment Division — Music Event JECTFEST', exp6_desc:'Managing operational needs, equipment, and event logistics. Coordinating with security, decoration, and sponsor teams for smooth event execution.',
+    exp7_title:'TikTok Affiliate Content Creator', exp7_desc:'Managing and producing affiliate marketing video content on TikTok for a fashion &amp; lifestyle niche (quiet luxury, OOTD, styling tips). Responsible for content ideas, filming, editing, and strategic placement of TikTok Shop product links to maximize sales conversion.',
+    tag_affiliate:'Affiliate Marketing',
+    pta1_title:'TikTok Affiliate — Fashion &amp; Lifestyle Content', pta1_desc:'Managing TikTok Shop affiliate marketing content for a quiet-luxury fashion &amp; lifestyle niche. Producing OOTD videos, styling tips, and product reviews that drive engagement and sales conversion through TikTok Shop links.',
     workflow_title:'My Professional Workflow',
     ws1:'Research', ws2:'Strategy', ws3:'Design', ws4:'Development', ws5:'Testing', ws6:'Launch',
     hard_skills:'⚡ Hard Skills', soft_skills:'🧠 Soft Skills', sk_comm:'Professional Communication', sk_adapt:'Adaptability &amp; Learning',
@@ -195,6 +201,9 @@ const translations = {
     pillar4_title:'AI &amp; 视频内容创作', pillar4_desc:'使用Leonardo AI、Kling Video、CapCut和Canva制作AI视频内容，打造有影响力的数字营销活动。',
     exp5_title:'内容创作者 &amp; AI视频编辑', exp5_desc:'管理和发展专注于AI视频内容的TikTok账户。使用Leonardo AI、Kling Video、Canva和CapCut制作高质量创意内容。',
     exp6_title:'设备部门 — 音乐活动JECTFEST', exp6_desc:'管理活动运营需求、设备和后勤。与安保、装饰和赞助团队协调以确保活动顺利进行。',
+    exp7_title:'TikTok联盟营销内容创作者', exp7_desc:'为时尚与生活方式领域（安静奢华风、每日穿搭、造型技巧）管理并制作TikTok联盟营销视频内容。负责内容创意、拍摄、剪辑，并策略性地放置TikTok Shop产品链接以最大化销售转化。',
+    tag_affiliate:'联盟营销',
+    pta1_title:'TikTok联盟营销 — 时尚与生活方式内容', pta1_desc:'为安静奢华风时尚与生活方式领域管理TikTok Shop联盟营销内容。制作每日穿搭视频、造型技巧和产品评测，推动互动和通过TikTok Shop链接实现的销售转化。',
     workflow_title:'我的专业工作流程',
     ws1:'研究', ws2:'策略', ws3:'设计', ws4:'开发', ws5:'测试', ws6:'发布',
     hard_skills:'⚡ 硬技能', soft_skills:'🧠 软技能', sk_comm:'专业沟通', sk_adapt:'适应性 &amp; 学习',
@@ -270,6 +279,9 @@ const translations = {
     pillar4_title:'Creación de Contenido AI &amp; Video', pillar4_desc:'Producción de contenido de video basado en IA utilizando Leonardo AI, Kling Video, CapCut y Canva para campañas digitales impactantes.',
     exp5_title:'Creador de Contenido &amp; Editor de Video AI', exp5_desc:'Gestión y crecimiento de una cuenta TikTok enfocada en contenido de video basado en IA. Uso de Leonardo AI, Kling Video, Canva y CapCut para producir contenido creativo de alta calidad.',
     exp6_title:'División de Equipos — Evento Musical JECTFEST', exp6_desc:'Gestión de necesidades operativas, equipos y logística del evento. Coordinación con equipos de seguridad, decoración y patrocinadores para una ejecución fluida.',
+    exp7_title:'Creador de Contenido Afiliado en TikTok', exp7_desc:'Gestión y producción de contenido de video de marketing de afiliados en TikTok para el nicho de moda &amp; estilo de vida (quiet luxury, OOTD, consejos de estilo). Responsable de las ideas de contenido, grabación, edición y colocación estratégica de enlaces de productos de TikTok Shop para maximizar la conversión de ventas.',
+    tag_affiliate:'Marketing de Afiliados',
+    pta1_title:'Afiliado TikTok — Contenido de Moda &amp; Estilo de Vida', pta1_desc:'Gestión de contenido de marketing de afiliados de TikTok Shop para un nicho de moda quiet-luxury &amp; estilo de vida. Producción de videos OOTD, consejos de estilo y reseñas de productos que impulsan el engagement y la conversión de ventas a través de enlaces de TikTok Shop.',
     workflow_title:'Mi Flujo de Trabajo Profesional',
     ws1:'Investigación', ws2:'Estrategia', ws3:'Diseño', ws4:'Desarrollo', ws5:'Pruebas', ws6:'Lanzamiento',
     hard_skills:'⚡ Habilidades Técnicas', soft_skills:'🧠 Habilidades Blandas', sk_comm:'Comunicación Profesional', sk_adapt:'Adaptabilidad &amp; Aprendizaje',
@@ -405,6 +417,12 @@ const caseStudies = {
     problem: 'Untuk bersaing sebagai digital marketer profesional, dibutuhkan validasi kompetensi resmi dalam merancang dan mengoptimalkan kampanye iklan digital, termasuk pemanfaatan teknologi AI yang kini menjadi standar industri Google Ads.',
     process: 'Mengikuti pelatihan dan ujian sertifikasi resmi di Google Skillshop, mempelajari strategi targeting audiens, optimasi iklan display, serta pemanfaatan fitur AI-Powered Performance Ads untuk meningkatkan efektivitas dan efisiensi kampanye.',
     result: 'Berhasil meraih dua sertifikasi resmi Google: Google Ads Display Certification dan AI-Powered Performance Ads Certification (berlaku 2026 — 2027), memperkuat kredibilitas sebagai digital marketer yang kompeten dalam advertising berbasis data dan AI.'
+  },
+  tiktokaffiliate1: {
+    title: 'Case Study — TikTok Affiliate Marketing (Fashion & Lifestyle)',
+    problem: 'Akun TikTok niche fashion & lifestyle (quiet luxury, OOTD) membutuhkan strategi konten yang konsisten agar mampu mengubah penonton menjadi pembeli melalui TikTok Shop, bukan sekadar mengejar views semata.',
+    process: 'Merancang ide konten mingguan (OOTD, styling tips, mix & match outfit, review produk), melakukan pengambilan gambar dan editing menggunakan CapCut & Canva, menulis caption dan hook yang persuasif, serta menempatkan link produk TikTok Shop secara strategis di setiap video. Menganalisis performa konten (views, likes, saves) untuk terus menyesuaikan gaya visual dan waktu posting.',
+    result: 'Konten berhasil membangun engagement organik yang stabil dengan ribuan likes per video dan pertumbuhan pengikut yang konsisten. Beberapa video dengan performa terbaik berkontribusi langsung pada peningkatan klik dan penjualan produk melalui link affiliate TikTok Shop.'
   }
 };
 
