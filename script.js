@@ -423,6 +423,12 @@ const caseStudies = {
     problem: 'Akun TikTok niche fashion & lifestyle (quiet luxury, OOTD) membutuhkan strategi konten yang konsisten agar mampu mengubah penonton menjadi pembeli melalui TikTok Shop, bukan sekadar mengejar views semata.',
     process: 'Merancang ide konten mingguan (OOTD, styling tips, mix & match outfit, review produk), melakukan pengambilan gambar dan editing menggunakan CapCut & Canva, menulis caption dan hook yang persuasif, serta menempatkan link produk TikTok Shop secara strategis di setiap video. Menganalisis performa konten (views, likes, saves) untuk terus menyesuaikan gaya visual dan waktu posting.',
     result: 'Konten berhasil membangun engagement organik yang stabil dengan ribuan likes per video dan pertumbuhan pengikut yang konsisten. Beberapa video dengan performa terbaik berkontribusi langsung pada peningkatan klik dan penjualan produk melalui link affiliate TikTok Shop.'
+  },
+    hostlivetiktok1: {
+    title: 'Case Study — Host Live TikTok (Content & Audience Engagement)',
+    problem: 'Akun TikTok membutuhkan strategi tambahan di luar konten feed/reels untuk membangun interaksi langsung dan real-time dengan audiens, guna memperkuat kepercayaan dan loyalitas penonton terhadap brand yang dipromosikan.',
+    process: 'Merancang dan membawakan sesi TikTok LIVE secara rutin, menyapa dan berinteraksi langsung dengan penonton, menjawab pertanyaan seputar produk secara real-time, serta menjaga ritme siaran agar tetap menarik selama berjam-jam. Memantau analitik LIVE (jumlah penonton, komentar, pengikut baru) untuk mengevaluasi dan meningkatkan kualitas siaran berikutnya.',
+    result: 'Berhasil menjangkau 3.309 total penonton dan meraih 92.100 suka dalam satu sesi siaran berdurasi 6 jam, dengan 1.554 komentar dan 69 pengikut baru — menunjukkan tingkat interaksi audiens yang tinggi. Pencapaian ini membawa akun ke Tahap 5 Perjalanan LIVE TikTok dan terpilih menjadi co-host selama 5 menit oleh sistem platform, serta mengumpulkan 894 berlian hadiah dari penonton dengan estimasi reward $3,54 per misi LIVE.'
   }
 };
 
