@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ferdi Algafar | Content Creator &amp; Digital Marketing</title>
+  <meta name="description" content="Portofolio Ferdi Algafar: Content Creator &amp; Digital Marketing. Lulusan D3 Manajemen Pemasaran (Cumlaude), bersertifikat BNSP Penyelia Media Sosial. Mencari magang Content Creator / Social Media." />
+  <meta name="theme-color" content="#05070d" />
+  <meta property="og:title" content="Ferdi Algafar | Content Creator &amp; Digital Marketing" />
+  <meta property="og:description" content="Dari riset tren sampai analitik: alur konten utuh, dibuktikan lewat akun organik dengan video terbaik 151 ribu views." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2305070d'/%3E%3Cpath d='M18 46V18h26v7H26v4h14v7H26v10z' fill='%2322d3ee'/%3E%3Ccircle cx='47' cy='44' r='4' fill='%23ff5a1f'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+
+  <!-- Tailwind via CDN (untuk produksi besar, bisa diganti Tailwind CLI) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { fa: { bg: '#05070d', surface: '#0b1020', cyan: '#22d3ee', violet: '#8b5cf6', warm: '#ff5a1f' } },
+          fontFamily: { display: ['Space Grotesk', 'system-ui', 'sans-serif'], body: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/effects.css" />
+  <link rel="stylesheet" href="css/i18n.css" />
+</head>
+
+<body class="fa-body">
+  <a class="fa-skip" href="#about">Lewati ke konten</a>
+
+  <!-- Background reaktif (canvas) + grain + letterbox intro -->
+  <canvas class="fa-bg" data-fa-bg aria-hidden="true"></canvas>
+  <div class="fa-vignette" aria-hidden="true"></div>
+  <div class="fa-grain" aria-hidden="true"></div>
+  <div class="fa-bars" aria-hidden="true"><span class="fa-bars__top"></span><span class="fa-bars__bottom"></span></div>
+
+  <!-- NAVBAR -->
+  <header class="fa-nav" data-fa-nav>
+    <div class="fa-nav__inner">
+      <a class="fa-logo" href="#hero" aria-label="Ferdi Algafar, ke atas">FA<span>.</span></a>
+
+      <nav class="fa-nav__links" id="fa-menu" aria-label="Navigasi utama">
+        <a href="#about" data-fa-link>Tentang</a>
+        <a href="#tools" data-fa-link>Tools</a>
+        <a href="#works" data-fa-link>Karya</a>
+        <a href="#experience" data-fa-link>Pengalaman</a>
+        <a href="#workflow" data-fa-link>Alur Kerja</a>
+        <a href="#contact" data-fa-link>Kontak</a>
+      </nav>
+
+      <div class="fa-nav__actions">
+        <div class="fa-lang" data-fa-lang>
+          <button class="fa-lang__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Pilih bahasa"><i data-lucide="globe" aria-hidden="true"></i><span data-fa-lang-cur>ID</span></button>
+          <ul class="fa-lang__menu" role="listbox" data-i18n-skip hidden>
+            <li><button type="button" role="option" data-lang="id" lang="id">Bahasa Indonesia</button></li>
+            <li><button type="button" role="option" data-lang="en" lang="en">English</button></li>
+            <li><button type="button" role="option" data-lang="es" lang="es">Español</button></li>
+            <li><button type="button" role="option" data-lang="zh" lang="zh-CN">中文</button></li>
+          </ul>
+        </div>
+        <button class="fa-btn fa-btn--ghost fa-btn--sm" type="button" data-fa-showreel-toggle aria-pressed="false">
+          <i data-lucide="play" aria-hidden="true"></i><span>Showreel</span>
+        </button>
+        <a class="fa-btn fa-btn--primary fa-btn--sm fa-hide-sm" href="#contact">Hubungi</a>
+        <button class="fa-burger" type="button" data-fa-menu-toggle aria-label="Buka menu" aria-expanded="false" aria-controls="fa-menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="fa-nav__progress" data-fa-progress aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+
+    <!-- SECTION:hero START -->
+    <section id="hero" class="fa-hero" aria-labelledby="hero-title">
+      <div class="fa-container fa-hero__grid">
+        <div class="fa-hero__copy">
+          <p class="fa-chip fa-chip--live" data-hero-anim>
+            <span class="fa-dot"></span> Terbuka untuk magang, freelance, dan kerja: Content Creator / Social Media
+          </p>
+          <p class="fa-eyebrow" data-hero-anim>Digital Marketing &times; Teknologi</p>
+          <h1 id="hero-title" class="fa-hero__title">
+            <span class="fa-line"><span class="fa-line__in" data-hero-line>Ferdi</span></span>
+            <span class="fa-line"><span class="fa-line__in fa-grad" data-hero-line>Algafar</span></span>
+          </h1>
+          <p class="fa-hero__role" data-hero-anim aria-live="polite">
+            <span class="fa-hero__role-prefix">Saya seorang</span>
+            <span class="fa-typer" data-fa-typer data-words="Content Creator|Social Media Specialist|Digital Marketer|Video Editor|Live Streamer"><span class="fa-typer__text">Content Creator</span><span class="fa-typer__caret" aria-hidden="true"></span></span>
+          </p>
+          <p class="fa-hero__lead" data-hero-anim data-i18n-html="hero.lead">
+            Lulusan D3 Manajemen Pemasaran (IPK 3,60, Cumlaude) dan bersertifikat BNSP Penyelia Media Sosial.
+            Saya mengerjakan alur konten secara utuh, dari riset tren sampai membaca performa, dan
+            membuktikannya lewat akun organik tanpa iklan berbayar dengan video terbaik <strong>151 ribu+ views</strong>.
+          </p>
+          <div class="fa-hero__cta" data-hero-anim>
+            <a class="fa-btn fa-btn--primary" href="#works"><span>Lihat Karya</span><i data-lucide="arrow-down-right" aria-hidden="true"></i></a>
+            <button class="fa-btn fa-btn--ghost" type="button" data-fa-showreel-toggle aria-pressed="false"><i data-lucide="clapperboard" aria-hidden="true"></i><span>Mode Showreel</span></button>
+            <a class="fa-btn fa-btn--text" href="assets/cv/CV-Ferdi-Algafar.pdf" download><i data-lucide="download" aria-hidden="true"></i><span>Unduh CV</span></a>
+          </div>
+
+          <dl class="fa-stats" data-hero-anim>
+            <div class="fa-stat"><dt>views video terbaik (TikTok)</dt><dd><span data-count="151.4" data-decimals="1">151,4</span><b>K</b></dd></div>
+            <div class="fa-stat"><dt>jam live streaming dalam 20 hari efektif</dt><dd><span data-count="70">70</span><b>+</b></dd></div>
+            <div class="fa-stat"><dt>sponsor &amp; media partner APP Fair 2025</dt><dd><span data-count="20">20</span><b>+</b></dd></div>
+            <div class="fa-stat"><dt>bulan magang digital marketing</dt><dd><span data-count="9">9</span></dd></div>
+          </dl>
+        </div>
+
+        <div class="fa-hero__visual" data-fa-parallax>
+          <div class="fa-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="fa-hero__glow" aria-hidden="true"></div>
+
+          <!-- Panggung 3D: foto + lapisan kedalaman, miring mengikuti kursor / sentuhan -->
+          <div class="fa-hero__stage" data-fa-tilt>
+            <div class="fa-hero__figure">
+              <img class="fa-hero__depth" data-z="-70" src="assets/img/hero-depth.webp" width="230" height="429" alt="" aria-hidden="true" />
+              <img class="fa-hero__depth" data-z="-52" src="assets/img/hero-depth.webp" width="230" height="429" alt="" aria-hidden="true" />
+              <img class="fa-hero__depth" data-z="-34" src="assets/img/hero-depth.webp" width="230" height="429" alt="" aria-hidden="true" />
+              <img class="fa-hero__depth" data-z="-16" src="assets/img/hero-depth.webp" width="230" height="429" alt="" aria-hidden="true" />
+              <img class="fa-hero__photo" src="assets/img/hero.webp" width="690" height="1286" alt="Ferdi Algafar tersenyum dengan kacamata hitam dan kemeja putih" fetchpriority="high" />
+            </div>
+            <div class="fa-float fa-float--a" data-depth="30" data-z="110"><i data-lucide="trending-up" aria-hidden="true"></i><div><b>151,4K</b><span>views organik</span></div></div>
+            <div class="fa-float fa-float--b" data-depth="-24" data-z="70"><i data-lucide="badge-check" aria-hidden="true"></i><div><b>BNSP</b><span>Penyelia Media Sosial</span></div></div>
+            <div class="fa-float fa-float--c" data-depth="18" data-z="140"><i data-lucide="radio" aria-hidden="true"></i><div><b>70+ jam</b><span>live di GOSH</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <a class="fa-scroll" href="#about" aria-label="Gulir ke bawah"><span>Scroll</span><i></i></a>
+    </section>
+    <!-- SECTION:hero END -->
+
+    <!-- SECTION:about START -->
+    <section id="about" class="fa-section" aria-labelledby="about-title">
+      <div class="fa-container fa-about">
+        <figure class="fa-about__photo" data-reveal>
+          <div class="fa-frame">
+            <img class="fa-about__img fa-about__img--duo" src="assets/img/about-duo.webp" width="900" height="1200" alt="Foto formal Ferdi Algafar mengenakan jas hitam" loading="lazy" />
+            <img class="fa-about__img fa-about__img--color" src="assets/img/about-color.webp" width="900" height="1200" alt="" aria-hidden="true" loading="lazy" />
+            <span class="fa-frame__corner fa-frame__corner--tl"></span><span class="fa-frame__corner fa-frame__corner--br"></span>
+          </div>
+          <figcaption class="fa-about__cap"><i data-lucide="map-pin" aria-hidden="true"></i> Kota Bekasi, Jawa Barat</figcaption>
+        </figure>
+
+        <div class="fa-about__body">
+          <p class="fa-eyebrow" data-reveal>01 / Tentang saya</p>
+          <h2 id="about-title" data-i18n-html="about.title" class="fa-h2" data-reveal>Dari ide, ke kamera, <em>ke angka</em>.</h2>
+          <p class="fa-lead" data-reveal>
+            Saya terbiasa memegang seluruh alur konten: riset tren dan kompetitor, kalender konten, hook dan caption,
+            pengambilan gambar, editing video dan foto, sampai membaca performa lewat views, interaksi, dan pertumbuhan audiens.
+          </p>
+          <p class="fa-text" data-reveal>
+            Saya mengelola akun TikTok dan Instagram secara organik, aktif live streaming di GOSH Live, serta pernah membangun
+            dua website perusahaan dan merancang identitas visual brand selama magang sembilan bulan. Sekarang saya mencari
+            magang sebagai Content Creator atau Social Media.
+          </p>
+
+          <ul class="fa-facts" data-reveal>
+            <li><i data-lucide="graduation-cap" aria-hidden="true"></i><div><b>D3 Manajemen Pemasaran Industri Elektronika</b><span>Politeknik APP Jakarta, 2023&ndash;2026 &middot; IPK 3,60 Cumlaude</span></div></li>
+            <li><i data-lucide="shield-check" aria-hidden="true"></i><div><b>BNSP Penyelia Media Sosial (Marketing)</b><span>Berlaku 13 Mei 2026 &ndash; 13 Mei 2029</span></div></li>
+            <li><i data-lucide="languages" aria-hidden="true"></i><div><b>Bahasa</b><span>Indonesia (native) &middot; Inggris (dasar)</span></div></li>
+            <li><i data-lucide="sparkles" aria-hidden="true"></i><div><b>Pendekatan</b><span>Organik, berbasis data, dibantu AI dengan pengecekan fakta</span></div></li>
+          </ul>
+
+          <div class="fa-tags" data-reveal>
+            <span>Content Creation</span><span>Copywriting</span><span>Social Media</span><span>Video Editing</span><span>TikTok Shop &amp; Affiliate</span><span>Live Streaming</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION:about END -->
+
+    <!-- SECTION:tools START -->
+    <section id="tools" class="fa-section fa-section--tight" aria-labelledby="tools-title">
+      <div class="fa-container">
+        <p class="fa-eyebrow" data-reveal>02 / Tools</p>
+        <h2 id="tools-title" class="fa-h2" data-reveal>Senjata di meja kerja</h2>
+      </div>
+
+      <div class="fa-marquees" data-reveal>
+        <div class="fa-marquee" data-fa-marquee data-speed="46" data-direction="left" role="list" aria-label="Tools dan platform yang saya gunakan">
+          <div class="fa-marquee__track">
+            <div class="fa-logo-card" role="listitem"><img src="assets/logos/capcut.webp" alt="CapCut" loading="lazy" /><span>CapCut</span></div>
+            <div class="fa-logo-card" role="listitem"><img src="assets/logos/canva.webp" alt="Canva" loading="lazy" /><span>Canva</span></div>
+            <div class="fa-logo-card" role="listitem"><img src="assets/logos/premiere.webp" alt="Adobe Premiere Pro" loading="lazy" /><span>Premiere Pro</span></div>
+            <div class="fa-logo-card" role="listitem"><img src="assets/logos/photoshop.webp" alt="Adobe Photoshop" loading="lazy" /><span>Photoshop</span></div>
+            <div class="fa-logo-card" role="listitem"><img src="assets/logos/illustrator.webp" alt="Adobe Illustrator" loading="lazy" /><span>Illustrator</span></div>
+            <div class="fa-logo-card fa-logo-card--wide" role="listitem"><img src="assets/logos/flow.webp" alt="Google Flow" loading="lazy" /><span>Google Flow</span></div>
+            <div class="fa-logo-card" role="listitem"><img src="assets/logos/gemini.webp" alt="Gemini" loading="lazy" /><span>Gemini AI</span></div>
+            <div class="fa-logo-card" role="listitem"><img src="assets/logos/claude.webp" alt="Claude" loading="lazy" /><span>Claude AI</span></div>
+          </div>
+        </div>
+
+        <div class="fa-marquee" data-fa-marquee data-speed="52" data-direction="right" role="list" aria-label="Platform dan layanan yang saya gunakan">
+          <div class="fa-marquee__track">
+            <div class="fa-logo-card fa-logo-card--wide" role="listitem"><img src="assets/logos/elevenlabs.webp" alt="ElevenLabs" loading="lazy" /><span>ElevenLabs</span></div>
+            <div class="fa-logo-card fa-logo-card--wide" role="listitem"><img src="assets/logos/leonardo.webp" alt="Leonardo.Ai" loading="lazy" /><span>Leonardo.Ai</span></div>
+            <div class="fa-logo-card" role="listitem"><img src="assets/logos/tiktok.svg" alt="TikTok" loading="lazy" /><span>TikTok</span></div>
+            <div class="fa-logo-card" role="listitem"><img src="assets/logos/instagram.webp" alt="Instagram" loading="lazy" /><span>Instagram</span></div>
+            <div class="fa-logo-card" role="listitem"><img src="assets/logos/obs.webp" alt="OBS Studio" loading="lazy" /><span>OBS</span></div>
+            <div class="fa-logo-card" role="listitem"><img src="assets/logos/gosh.webp" alt="GOSH Live" loading="lazy" /><span>GOSH Live</span></div>
+            <div class="fa-logo-card fa-logo-card--wide" role="listitem"><img src="assets/logos/hubspot.webp" alt="HubSpot" loading="lazy" /><span>HubSpot</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fa-container">
+        <div class="fa-trust" data-reveal>
+          <span class="fa-trust__label">Pernah berkarya bersama</span>
+          <div class="fa-trust__logos">
+            <span class="fa-trust__logo"><img src="assets/logos/niagamas.webp" alt="PT Niagamas Setiausaha" loading="lazy" /></span>
+            <span class="fa-trust__logo"><img src="assets/logos/power.webp" alt="PT Power Elektrika Nusantara" loading="lazy" /></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION:tools END -->
+
+    <!-- SECTION:works START -->
+    <section id="works" class="fa-section" aria-labelledby="works-title">
+      <div class="fa-container">
+        <div class="fa-head">
+          <div>
+            <p class="fa-eyebrow" data-reveal>03 / Karya pilihan</p>
+            <h2 id="works-title" data-i18n-html="works.title" class="fa-h2" data-reveal>Hasil yang bisa <em>diputar</em> dan <em>diukur</em></h2>
+          </div>
+          <div class="fa-filters" role="tablist" aria-label="Filter karya" data-fa-filters data-reveal>
+            <button type="button" class="is-active" data-filter="all" role="tab" aria-selected="true">Semua</button>
+            <button type="button" data-filter="konten" role="tab" aria-selected="false">Konten</button>
+            <button type="button" data-filter="video" role="tab" aria-selected="false">Video &amp; Iklan</button>
+            <button type="button" data-filter="event" role="tab" aria-selected="false">Event</button>
+            <button type="button" data-filter="brand" role="tab" aria-selected="false">Brand &amp; Web</button>
+          </div>
+        </div>
+
+        <div class="fa-works" data-fa-works aria-live="polite"></div>
+        <p class="fa-note" data-reveal><i data-lucide="mouse-pointer-click" aria-hidden="true"></i> Klik kartu untuk membuka detail, video, atau galeri.</p>
+      </div>
+    </section>
+    <!-- SECTION:works END -->
+
+    <!-- SECTION:experience START -->
+    <section id="experience" class="fa-section" aria-labelledby="exp-title">
+      <div class="fa-container">
+        <p class="fa-eyebrow" data-reveal>04 / Pengalaman &amp; keahlian</p>
+        <h2 id="exp-title" data-i18n-html="exp.title" class="fa-h2" data-reveal>Jejak kerja <em>sampai hari ini</em></h2>
+
+        <div class="fa-exp">
+          <ol class="fa-timeline" data-fa-timeline>
+            <li class="fa-tl" data-reveal>
+              <span class="fa-tl__dot"></span>
+              <div class="fa-tl__meta"><time>Nov 2025 &ndash; Agu 2026</time><span class="fa-pill">Magang</span></div>
+              <h3>Digital Marketing &amp; Web Developer Intern</h3>
+              <p class="fa-tl__org">PT Niagamas Setiausaha &amp; PT Power Elektrika Nusantara</p>
+              <ul>
+                <li>Membangun dua website perusahaan dari nol dengan HTML, CSS, dan JavaScript.</li>
+                <li>Merancang aset identitas brand: kalender, kemeja korporat, banner Facebook &amp; Instagram, spanduk, kartu nama, proposal.</li>
+                <li>Mendokumentasikan kegiatan perusahaan (foto dan catatan) sebagai bahan laporan internal.</li>
+              </ul>
+            </li>
+            <li class="fa-tl" data-reveal>
+              <span class="fa-tl__dot"></span>
+              <div class="fa-tl__meta"><time>2026 &ndash; Sekarang</time><span class="fa-pill fa-pill--violet">Mandiri</span></div>
+              <h3>Content Creator &amp; Live Streamer</h3>
+              <p class="fa-tl__org">@cliperpoint_ &middot; @OutfitAtMeiraa_ &middot; @ghaffarfaktaunik &middot; GOSH Live</p>
+              <ul>
+                <li>Mengembangkan akun clipper dari nol secara organik: 515 pengikut, 7,5K suka, video terbaik 151,4K views.</li>
+                <li>Akun affiliate fashion berbasis tokoh virtual AI: 952 pengikut, 5,9K suka, tanpa biaya model dan produksi lapangan.</li>
+                <li>Motion graphic 9:16 dengan voice-over ElevenLabs, subtitle sinkron, dan sound design.</li>
+                <li>Live streaming 70+ jam dalam 20 hari efektif dengan OBS, 183 pengikut.</li>
+              </ul>
+            </li>
+            <li class="fa-tl" data-reveal>
+              <span class="fa-tl__dot"></span>
+              <div class="fa-tl__meta"><time>2024 &ndash; Mei 2026</time><span class="fa-pill fa-pill--warm">Desain</span></div>
+              <h3>Desain Grafis</h3>
+              <p class="fa-tl__org">PT Niagamas Setiausaha &amp; Politeknik APP Jakarta</p>
+              <ul>
+                <li>Satu set materi identitas brand yang konsisten di Canva: banner, kemeja korporat, kalender, spanduk, kartu nama, proposal.</li>
+                <li>Proyek mata kuliah Desain Media Promosi, sebagai bagian dari studi periklanan.</li>
+              </ul>
+            </li>
+            <li class="fa-tl" data-reveal>
+              <span class="fa-tl__dot"></span>
+              <div class="fa-tl__meta"><time>Mar &ndash; Jun 2025</time><span class="fa-pill">Event</span></div>
+              <h3>Koordinator Sponsorship</h3>
+              <p class="fa-tl__org">APP Fair 2025, Politeknik APP Jakarta</p>
+              <ul>
+                <li>Memimpin tim menghubungi calon sponsor dari F&amp;B, perbankan, ritel, kecantikan, hingga media lokal.</li>
+                <li>Menyusun proposal, pitch deck, dan presentasi; menjalin kerja sama dengan 20+ sponsor dan media partner.</li>
+              </ul>
+            </li>
+            <li class="fa-tl" data-reveal>
+              <span class="fa-tl__dot"></span>
+              <div class="fa-tl__meta"><time>2024 &ndash; 2025</time><span class="fa-pill fa-pill--violet">Kreatif</span></div>
+              <h3>Creative &amp; Talent</h3>
+              <p class="fa-tl__org">Proyek Kampus, Politeknik APP Jakarta</p>
+              <ul>
+                <li>Talent dan pengembang ide film iklan &ldquo;Good Day x Zombie&rdquo; (kelompok MP3C, 30 September 2024).</li>
+                <li>Terlibat dalam kampanye digital IndiHome Telkom Indonesia, dari konsep sampai pengambilan gambar.</li>
+              </ul>
+            </li>
+          </ol>
+
+          <aside class="fa-skills" aria-label="Keahlian">
+            <div class="fa-skillgroup" data-reveal>
+              <h3><i data-lucide="clapperboard" aria-hidden="true"></i> Konten &amp; kreatif</h3>
+              <ul class="fa-chips">
+                <li>Content Creation</li><li>Content Planning</li><li>Copywriting (hook &amp; caption)</li><li>Editing Video (CapCut, Google Flow)</li><li>Editing Foto &amp; Desain Visual (Canva)</li><li>AI Generate Video</li><li>Motion Graphic</li>
+              </ul>
+            </div>
+            <div class="fa-skillgroup" data-reveal>
+              <h3><i data-lucide="megaphone" aria-hidden="true"></i> Marketing &amp; media sosial</h3>
+              <ul class="fa-chips">
+                <li>Social Media Management</li><li>Riset Tren &amp; Kompetitor</li><li>Analitik Performa Konten</li><li>TikTok Shop &amp; Affiliate</li><li>Google Ads (Display &amp; AI-Powered)</li><li>Content Marketing</li><li>Sponsorship &amp; Kemitraan</li>
+              </ul>
+            </div>
+            <div class="fa-skillgroup" data-reveal>
+              <h3><i data-lucide="cpu" aria-hidden="true"></i> Teknologi</h3>
+              <ul class="fa-chips">
+                <li>HTML, CSS, JavaScript</li><li>Live Streaming (OBS)</li><li>Claude AI &amp; Gemini AI (brainstorming)</li><li>ElevenLabs (voice-over)</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+
+        <div class="fa-certs-head">
+          <h3 class="fa-h3" data-reveal>Sertifikasi &amp; penghargaan</h3>
+          <p class="fa-note" data-reveal>Klik untuk melihat sertifikat.</p>
+        </div>
+        <div class="fa-certs" data-fa-certs></div>
+      </div>
+    </section>
+    <!-- SECTION:experience END -->
+
+    <!-- SECTION:workflow START -->
+    <section id="workflow" class="fa-section" aria-labelledby="wf-title">
+      <div class="fa-container">
+        <p class="fa-eyebrow" data-reveal>05 / Alur kerja</p>
+        <h2 id="wf-title" data-i18n-html="wf.title" class="fa-h2" data-reveal>Enam langkah dari <em>ide</em> ke <em>hasil</em></h2>
+        <p class="fa-lead fa-lead--narrow" data-reveal>Pilih langkah, atau biarkan berjalan sendiri. Setiap konten saya melewati urutan ini.</p>
+
+        <div class="fa-wf" data-fa-workflow data-interval="7000">
+          <div class="fa-wf__nav" role="tablist" aria-label="Langkah alur kerja" aria-orientation="vertical">
+            <button type="button" class="fa-wf__step is-active" role="tab" id="wf-t1" aria-controls="wf-p1" aria-selected="true"><span class="fa-wf__num">01</span><span class="fa-wf__label">Riset tren &amp; kompetitor</span></button>
+            <button type="button" class="fa-wf__step" role="tab" id="wf-t2" aria-controls="wf-p2" aria-selected="false" tabindex="-1"><span class="fa-wf__num">02</span><span class="fa-wf__label">Kalender konten</span></button>
+            <button type="button" class="fa-wf__step" role="tab" id="wf-t3" aria-controls="wf-p3" aria-selected="false" tabindex="-1"><span class="fa-wf__num">03</span><span class="fa-wf__label">Hook &amp; naskah</span></button>
+            <button type="button" class="fa-wf__step" role="tab" id="wf-t4" aria-controls="wf-p4" aria-selected="false" tabindex="-1"><span class="fa-wf__num">04</span><span class="fa-wf__label">Produksi &amp; editing</span></button>
+            <button type="button" class="fa-wf__step" role="tab" id="wf-t5" aria-controls="wf-p5" aria-selected="false" tabindex="-1"><span class="fa-wf__num">05</span><span class="fa-wf__label">Publikasi &amp; distribusi</span></button>
+            <button type="button" class="fa-wf__step" role="tab" id="wf-t6" aria-controls="wf-p6" aria-selected="false" tabindex="-1"><span class="fa-wf__num">06</span><span class="fa-wf__label">Analitik &amp; iterasi</span></button>
+            <span class="fa-wf__rail" aria-hidden="true"><i data-wf-rail></i></span>
+          </div>
+
+          <div class="fa-wf__stage">
+            <div class="fa-wf__bar" aria-hidden="true"><i data-wf-bar></i></div>
+
+            <article class="fa-wf__panel is-active" role="tabpanel" id="wf-p1" aria-labelledby="wf-t1">
+              <div class="fa-wf__icon"><i data-lucide="search" aria-hidden="true"></i></div>
+              <h3>Riset tren &amp; kompetitor</h3>
+              <p>Saya memantau topik yang sedang naik, format yang konsisten menang, dan gaya kompetitor. Dari sana saya mencatat pola hook, durasi, dan jam tayang yang bekerja.</p>
+              <p class="fa-wf__out"><b>Hasil:</b> daftar ide, referensi format, dan celah konten yang belum digarap.</p>
+              <ul class="fa-wf__tools"><li>TikTok</li><li>Instagram</li><li>Gemini AI</li><li>Claude AI</li></ul>
+            </article>
+            <article class="fa-wf__panel" role="tabpanel" id="wf-p2" aria-labelledby="wf-t2" hidden>
+              <div class="fa-wf__icon"><i data-lucide="calendar-days" aria-hidden="true"></i></div>
+              <h3>Kalender konten</h3>
+              <p>Ide dipetakan ke pilar konten dan jadwal tayang. Saya menyeimbangkan format, menetapkan target per akun, dan menjaga ritme unggah agar konsisten.</p>
+              <p class="fa-wf__out"><b>Hasil:</b> kalender mingguan yang jelas, siap dieksekusi tanpa menebak-nebak.</p>
+              <ul class="fa-wf__tools"><li>Canva</li><li>Claude AI</li></ul>
+            </article>
+            <article class="fa-wf__panel" role="tabpanel" id="wf-p3" aria-labelledby="wf-t3" hidden>
+              <div class="fa-wf__icon"><i data-lucide="pen-line" aria-hidden="true"></i></div>
+              <h3>Hook &amp; naskah</h3>
+              <p>Tiga detik pertama menentukan segalanya. Saya menulis hook, judul, caption, dan hashtag, lalu menyusun naskah dan voice-over. Fakta selalu dicek sebelum tayang.</p>
+              <p class="fa-wf__out"><b>Hasil:</b> naskah dan teks layar yang padat, jelas, dan bisa diverifikasi.</p>
+              <ul class="fa-wf__tools"><li>Claude AI</li><li>Gemini AI</li><li>ElevenLabs</li></ul>
+            </article>
+            <article class="fa-wf__panel" role="tabpanel" id="wf-p4" aria-labelledby="wf-t4" hidden>
+              <div class="fa-wf__icon"><i data-lucide="film" aria-hidden="true"></i></div>
+              <h3>Produksi &amp; editing</h3>
+              <p>Pengambilan gambar atau pembuatan video AI, lalu editing: potong, teks judul, transisi, efek visual, subtitle yang sinkron, dan sound design dengan mixing sekitar -14 LUFS.</p>
+              <p class="fa-wf__out"><b>Hasil:</b> video vertikal 9:16 siap unggah dengan identitas visual yang konsisten.</p>
+              <ul class="fa-wf__tools"><li>CapCut</li><li>Premiere Pro</li><li>Google Flow</li><li>Photoshop</li><li>Leonardo.Ai</li></ul>
+            </article>
+            <article class="fa-wf__panel" role="tabpanel" id="wf-p5" aria-labelledby="wf-t5" hidden>
+              <div class="fa-wf__icon"><i data-lucide="send" aria-hidden="true"></i></div>
+              <h3>Publikasi &amp; distribusi</h3>
+              <p>Unggah rutin ke TikTok dan Instagram Reels, memasang produk lewat keranjang kuning TikTok Shop, dan siaran langsung terjadwal di GOSH Live dengan OBS.</p>
+              <p class="fa-wf__out"><b>Hasil:</b> konten tayang tepat waktu, di platform yang tepat, dengan interaksi yang dijaga.</p>
+              <ul class="fa-wf__tools"><li>TikTok</li><li>Instagram</li><li>OBS</li><li>GOSH Live</li></ul>
+            </article>
+            <article class="fa-wf__panel" role="tabpanel" id="wf-p6" aria-labelledby="wf-t6" hidden>
+              <div class="fa-wf__icon"><i data-lucide="chart-line" aria-hidden="true"></i></div>
+              <h3>Analitik &amp; iterasi</h3>
+              <p>Saya membaca views, waktu tonton, interaksi, dan pertumbuhan pengikut. Format yang menang diulang dan dikembangkan, yang lemah dievaluasi dan dibuang.</p>
+              <p class="fa-wf__out"><b>Hasil:</b> keputusan konten berdasarkan data, bukan perasaan.</p>
+              <ul class="fa-wf__tools"><li>TikTok Analytics</li><li>Instagram Insight</li><li>HubSpot</li><li>Google Ads</li></ul>
+            </article>
+
+            <div class="fa-wf__ctrl">
+              <button type="button" class="fa-iconbtn" data-wf-prev aria-label="Langkah sebelumnya"><i data-lucide="arrow-left" aria-hidden="true"></i></button>
+              <button type="button" class="fa-iconbtn" data-wf-toggle aria-label="Jeda putar otomatis" aria-pressed="false"><i data-lucide="pause" aria-hidden="true"></i></button>
+              <button type="button" class="fa-iconbtn" data-wf-next aria-label="Langkah berikutnya"><i data-lucide="arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION:workflow END -->
+
+    <!-- SECTION:contact START -->
+    <section id="contact" class="fa-section fa-contact" aria-labelledby="contact-title">
+      <div class="fa-container">
+        <p class="fa-eyebrow" data-reveal>06 / Kontak</p>
+        <h2 id="contact-title" data-i18n-html="contact.title" class="fa-contact__title" data-reveal>Mari bikin konten yang <em>ditonton sampai habis</em>.</h2>
+        <p class="fa-lead fa-lead--narrow" data-reveal>Saya sedang mencari magang sebagai Content Creator atau Social Media. Kirim pesan, saya balas secepatnya.</p>
+
+        <div class="fa-contact__grid" data-reveal>
+          <a class="fa-contact__card fa-contact__card--main" href="mailto:ferdialghafurr87@gmail.com?subject=Peluang%20Magang%20-%20Ferdi%20Algafar">
+            <i data-lucide="mail" aria-hidden="true"></i>
+            <span class="fa-contact__label">Email</span>
+            <strong>ferdialghafurr87@gmail.com</strong>
+          </a>
+          <a class="fa-contact__card" href="https://wa.me/6281188001580?text=Halo%20Ferdi%2C%20saya%20melihat%20portofolio%20Anda." target="_blank" rel="noopener">
+            <i data-lucide="message-circle" aria-hidden="true"></i>
+            <span class="fa-contact__label">WhatsApp</span>
+            <strong>0811-8800-1580</strong>
+          </a>
+          <a class="fa-contact__card" href="https://www.tiktok.com/@cliperpoint_" target="_blank" rel="noopener">
+            <i data-lucide="music-2" aria-hidden="true"></i>
+            <span class="fa-contact__label">TikTok Clipper</span>
+            <strong>@cliperpoint_</strong>
+          </a>
+          <a class="fa-contact__card" href="assets/cv/CV-Ferdi-Algafar.pdf" download>
+            <i data-lucide="file-down" aria-hidden="true"></i>
+            <span class="fa-contact__label">Curriculum Vitae</span>
+            <strong>Unduh CV (PDF)</strong>
+          </a>
+          <a class="fa-contact__card" href="assets/cv/Portofolio-Ferdi-Algafar.pdf" download>
+            <i data-lucide="folder-down" aria-hidden="true"></i>
+            <span class="fa-contact__label">Portofolio</span>
+            <strong>Unduh Portofolio (PDF)</strong>
+          </a>
+          <a class="fa-contact__card" href="https://www.tiktok.com/@almeiravalerianareswari_" target="_blank" rel="noopener">
+            <i data-lucide="shopping-bag" aria-hidden="true"></i>
+            <span class="fa-contact__label">TikTok Affiliate</span>
+            <strong>Outfit At Meiraa</strong>
+          </a>
+          <a class="fa-contact__card" href="https://www.tiktok.com/@ghaffarfaktaunik" target="_blank" rel="noopener">
+            <i data-lucide="music-2" aria-hidden="true"></i>
+            <span class="fa-contact__label">TikTok</span>
+            <strong>@ghaffarfaktaunik</strong>
+          </a>
+          <a class="fa-contact__card" href="https://gosh.com/profile/Verday_KNJ05" target="_blank" rel="noopener">
+            <i data-lucide="radio" aria-hidden="true"></i>
+            <span class="fa-contact__label">GOSH Live</span>
+            <strong>Verday_KNJ05</strong>
+          </a>
+        </div>
+
+        <div class="fa-contact__actions" data-reveal>
+          <button class="fa-btn fa-btn--primary" type="button" data-fa-copy="ferdialghafurr87@gmail.com"><i data-lucide="copy" aria-hidden="true"></i><span>Salin email</span></button>
+          <button class="fa-btn fa-btn--ghost" type="button" data-fa-showreel-toggle aria-pressed="false"><i data-lucide="play" aria-hidden="true"></i><span>Putar showreel</span></button>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION:contact END -->
+  </main>
+
+  <footer class="fa-footer">
+    <div class="fa-container fa-footer__inner">
+      <p>&copy; 2026 Ferdi Algafar &middot; Kota Bekasi, Jawa Barat</p>
+      <p class="fa-footer__stack">HTML &middot; Tailwind CSS &middot; GSAP &middot; Vanilla JS</p>
+      <a href="#hero" class="fa-footer__top">Kembali ke atas <i data-lucide="arrow-up" aria-hidden="true"></i></a>
+    </div>
+  </footer>
+
+  <!-- Lightbox / modal (diisi oleh js/lightbox.js) -->
+  <div class="fa-modal" data-fa-modal hidden role="dialog" aria-modal="true" aria-labelledby="fa-modal-title">
+    <div class="fa-modal__backdrop" data-fa-close></div>
+    <div class="fa-modal__panel" tabindex="-1">
+      <button class="fa-modal__close" type="button" data-fa-close aria-label="Tutup"><i data-lucide="x" aria-hidden="true"></i></button>
+      <div class="fa-modal__media">
+        <div class="fa-modal__stage" data-fa-stage></div>
+        <div class="fa-modal__thumbs" data-fa-thumbs></div>
+        <button class="fa-iconbtn fa-modal__nav fa-modal__nav--prev" type="button" data-fa-prev aria-label="Sebelumnya"><i data-lucide="chevron-left" aria-hidden="true"></i></button>
+        <button class="fa-iconbtn fa-modal__nav fa-modal__nav--next" type="button" data-fa-next aria-label="Berikutnya"><i data-lucide="chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <div class="fa-modal__info">
+        <p class="fa-eyebrow" data-fa-cat></p>
+        <h3 id="fa-modal-title" class="fa-modal__title" data-fa-title></h3>
+        <p class="fa-modal__role" data-fa-role></p>
+        <ul class="fa-modal__metrics" data-fa-metrics></ul>
+        <div class="fa-modal__copy" data-fa-copy-block></div>
+        <div class="fa-modal__links" data-fa-links></div>
+      </div>
+    </div>
+  </div>
+
+  <noscript><p class="fa-noscript">Website ini memakai JavaScript untuk animasi dan galeri. Aktifkan JavaScript untuk pengalaman penuh.</p></noscript>
+
+  <!-- Library eksternal (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+
+  <!-- Data + modul -->
+  <script src="data/works.js"></script>
+  <script src="js/marquee.js"></script>
+  <script src="js/workflow.js"></script>
+  <script src="js/bg-reactive.js"></script>
+  <script src="js/showreel.js"></script>
+  <script src="js/lightbox.js"></script>
+  <script src="js/i18n-data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

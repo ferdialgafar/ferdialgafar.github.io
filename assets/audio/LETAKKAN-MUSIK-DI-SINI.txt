@@ -1,0 +1,3 @@
+Simpan file musik bebas hak cipta dengan nama:  showreel.mp3  (maks. ~3 MB) di folder ini.
+Sumber: Pixabay Music, Uppbeat, YouTube Audio Library. Cari kata kunci: "technology", "corporate", "cinematic".
+Jika file tidak ada, Mode Showreel otomatis memakai musik ambient sintetis.

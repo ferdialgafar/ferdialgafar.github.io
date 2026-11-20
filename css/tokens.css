@@ -1,0 +1,34 @@
+/* FILE: css/tokens.css — variabel desain (ubah di sini untuk mengganti tema) */
+:root {
+  /* warna */
+  --fa-bg: #05070d;
+  --fa-surface: #0b1020;
+  --fa-surface-2: #111833;
+  --fa-text: #e8ecf5;
+  --fa-muted: #8f98b3;
+  --fa-line: rgba(255, 255, 255, 0.09);
+  --fa-line-strong: rgba(255, 255, 255, 0.18);
+
+  --fa-cyan: #22d3ee;
+  --fa-violet: #8b5cf6;
+  --fa-warm: #ff5a1f;
+  /* aksen aktif: berubah saat background diklik (lihat js/bg-reactive.js) */
+  --fa-accent: var(--fa-cyan);
+  --fa-accent-rgb: 34, 211, 238;
+
+  /* tipografi */
+  --fa-font-display: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --fa-font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* ukuran */
+  --fa-max: 1240px;
+  --fa-gutter: clamp(18px, 4vw, 44px);
+  --fa-radius: 22px;
+  --fa-radius-sm: 14px;
+  --fa-nav-h: 72px;
+  --fa-section-y: clamp(84px, 11vw, 150px);
+
+  /* gerak */
+  --fa-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --fa-dur: 0.6s;
+}

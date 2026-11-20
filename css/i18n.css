@@ -1,0 +1,20 @@
+/* FILE: css/i18n.css — pengalih bahasa + penyesuaian tipografi per bahasa */
+.fa-lang { position: relative; }
+.fa-lang__btn { display: inline-flex; align-items: center; gap: 6px; height: 38px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--fa-line-strong); background: rgba(255, 255, 255, 0.04); color: var(--fa-text, #eef1fb); font-family: var(--fa-font-display); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; cursor: pointer; transition: background .2s, border-color .2s; }
+.fa-lang__btn:hover, .fa-lang.is-open .fa-lang__btn { background: rgba(255, 255, 255, 0.09); border-color: var(--fa-accent, #22d3ee); }
+.fa-lang__btn i, .fa-lang__btn svg { width: 16px; height: 16px; }
+.fa-lang__menu { position: absolute; right: 0; top: calc(100% + 10px); min-width: 176px; margin: 0; padding: 6px; list-style: none; border-radius: 14px; background: rgba(10, 13, 24, 0.96); backdrop-filter: blur(16px); border: 1px solid var(--fa-line-strong); box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55); z-index: 80; }
+.fa-lang__menu[hidden] { display: none; }
+.fa-lang__menu button { display: flex; width: 100%; align-items: center; justify-content: space-between; padding: 10px 12px; border: 0; border-radius: 9px; background: transparent; color: var(--fa-text, #eef1fb); font: inherit; font-size: 0.9rem; text-align: left; cursor: pointer; }
+.fa-lang__menu button:hover { background: rgba(255, 255, 255, 0.07); }
+.fa-lang__menu button.is-on { color: var(--fa-accent, #22d3ee); }
+.fa-lang__menu button.is-on::after { content: "✓"; font-size: 0.85rem; }
+@media (max-width: 640px) { .fa-lang__btn { height: 36px; padding: 0 10px; } }
+
+/* Mandarin: font CJK, tanpa letter-spacing negatif (merusak aksara) */
+:lang(zh-CN) body, html:lang(zh-CN) { font-family: var(--fa-font-body), "PingFang SC", "Noto Sans SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif; }
+html:lang(zh-CN) :is(.fa-h2, .fa-h3, .fa-hero__title, .fa-hero__lead, .fa-work__title, .fa-tl h3, .fa-wf__panel h3, .fa-contact__title, .fa-reel__title, .fa-modal__title, .fa-stat dd) { letter-spacing: 0; font-family: var(--fa-font-display), "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif; }
+html:lang(zh-CN) :is(.fa-eyebrow, .fa-pill, .fa-work__cat, .fa-reel__kicker, .fa-reel__brand, .fa-trust__label) { letter-spacing: 0.06em; text-transform: none; }
+html:lang(zh-CN) p, html:lang(zh-CN) li { line-height: 1.8; }
+/* Spanyol: kata lebih panjang, izinkan pemenggalan */
+html:lang(es) :is(.fa-h2, .fa-contact__title, .fa-work__title, .fa-wf__panel h3) { hyphens: auto; overflow-wrap: break-word; }

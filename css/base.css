@@ -1,0 +1,97 @@
+/* FILE: css/base.css — reset ringan, tipografi, tombol, komponen umum */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-padding-top: calc(var(--fa-nav-h) + 12px); -webkit-text-size-adjust: 100%; }
+body.fa-body {
+  margin: 0;
+  background: var(--fa-bg);
+  color: var(--fa-text);
+  font-family: var(--fa-font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+body.fa-lock { overflow: hidden; }
+img, svg, video, canvas { max-width: 100%; }
+img { display: block; height: auto; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; padding: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+h1, h2, h3, h4, p, dl, dd, figure { margin: 0; }
+em { font-style: normal; }
+::selection { background: rgba(var(--fa-accent-rgb), 0.35); color: #fff; }
+:focus-visible { outline: 2px solid var(--fa-accent); outline-offset: 3px; border-radius: 6px; }
+
+.fa-skip { position: fixed; left: 12px; top: -60px; z-index: 200; background: #fff; color: #000; padding: 10px 16px; border-radius: 10px; font-weight: 600; transition: top 0.2s; }
+.fa-skip:focus { top: 12px; }
+.fa-container { width: 100%; max-width: var(--fa-max); margin-inline: auto; padding-inline: var(--fa-gutter); }
+.fa-section { position: relative; padding-block: var(--fa-section-y); }
+.fa-section--tight { padding-bottom: calc(var(--fa-section-y) * 0.7); }
+
+/* tipografi */
+.fa-eyebrow {
+  font-family: var(--fa-font-display); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--fa-accent); margin-bottom: 18px; display: flex; align-items: center; gap: 12px;
+}
+.fa-eyebrow::before { content: ''; width: 32px; height: 1px; background: currentColor; opacity: 0.7; }
+.fa-h2 {
+  font-family: var(--fa-font-display); font-weight: 700; letter-spacing: -0.03em; line-height: 1.04;
+  font-size: clamp(2rem, 5.2vw, 3.9rem); max-width: 18ch;
+}
+.fa-h2 em, .fa-contact__title em, .fa-grad {
+  background: linear-gradient(100deg, var(--fa-cyan), var(--fa-violet) 55%, var(--fa-warm));
+  -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
+}
+.fa-h3 { font-family: var(--fa-font-display); font-size: clamp(1.35rem, 2.4vw, 1.8rem); font-weight: 600; letter-spacing: -0.02em; }
+.fa-lead { font-size: clamp(1.05rem, 1.6vw, 1.22rem); color: #cdd4e6; max-width: 62ch; margin-top: 22px; }
+.fa-lead--narrow { max-width: 52ch; }
+.fa-text { color: var(--fa-muted); max-width: 62ch; margin-top: 16px; }
+.fa-note { display: inline-flex; align-items: center; gap: 8px; color: var(--fa-muted); font-size: 0.85rem; margin-top: 22px; }
+.fa-note i, .fa-note svg { width: 16px; height: 16px; }
+
+/* tombol */
+.fa-btn {
+  --b: var(--fa-line-strong);
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 24px; border-radius: 999px;
+  font-family: var(--fa-font-display); font-weight: 600; font-size: 0.95rem; letter-spacing: 0.01em; line-height: 1;
+  border: 1px solid var(--b); transition: transform 0.35s var(--fa-ease), background 0.3s, border-color 0.3s, box-shadow 0.35s, color 0.3s; white-space: nowrap;
+}
+.fa-btn svg, .fa-btn i { width: 18px; height: 18px; flex: none; }
+.fa-btn:hover { transform: translateY(-2px); }
+.fa-btn--primary { background: var(--fa-accent); color: #04121a; border-color: transparent; box-shadow: 0 10px 34px -10px rgba(var(--fa-accent-rgb), 0.65); }
+.fa-btn--primary:hover { box-shadow: 0 16px 44px -8px rgba(var(--fa-accent-rgb), 0.8); }
+.fa-btn--ghost { background: rgba(255, 255, 255, 0.04); backdrop-filter: blur(8px); }
+.fa-btn--ghost:hover, .fa-btn--ghost[aria-pressed='true'] { background: rgba(var(--fa-accent-rgb), 0.14); border-color: rgba(var(--fa-accent-rgb), 0.6); }
+.fa-btn--text { --b: transparent; color: var(--fa-muted); padding-inline: 10px; }
+.fa-btn--text:hover { color: var(--fa-text); }
+.fa-btn--sm { padding: 10px 18px; font-size: 0.85rem; }
+.fa-iconbtn {
+  width: 44px; height: 44px; display: inline-grid; place-items: center; border-radius: 50%;
+  border: 1px solid var(--fa-line-strong); background: rgba(255, 255, 255, 0.04); transition: background 0.25s, border-color 0.25s, transform 0.3s var(--fa-ease);
+}
+.fa-iconbtn:hover { background: rgba(var(--fa-accent-rgb), 0.16); border-color: rgba(var(--fa-accent-rgb), 0.6); transform: scale(1.06); }
+.fa-iconbtn svg { width: 18px; height: 18px; }
+
+/* chip, pill, kartu kaca */
+.fa-chip {
+  display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; border-radius: 999px; font-size: 0.82rem; color: #cdd4e6;
+  border: 1px solid var(--fa-line); background: rgba(255, 255, 255, 0.04); backdrop-filter: blur(8px); margin-bottom: 26px;
+}
+.fa-dot { width: 8px; height: 8px; border-radius: 50%; background: #3df5a3; box-shadow: 0 0 0 0 rgba(61, 245, 163, 0.6); animation: fa-ping 2s infinite; }
+@keyframes fa-ping { 0% { box-shadow: 0 0 0 0 rgba(61, 245, 163, 0.55); } 80%, 100% { box-shadow: 0 0 0 10px rgba(61, 245, 163, 0); } }
+.fa-pill { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; color: var(--fa-cyan); background: rgba(34, 211, 238, 0.1); border: 1px solid rgba(34, 211, 238, 0.3); }
+.fa-pill--violet { color: #b8a1ff; background: rgba(139, 92, 246, 0.12); border-color: rgba(139, 92, 246, 0.35); }
+.fa-pill--warm { color: #ff9a6b; background: rgba(255, 90, 31, 0.1); border-color: rgba(255, 90, 31, 0.35); }
+
+.fa-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 26px; margin-bottom: 44px; }
+.fa-hide-sm { }
+
+/* utilitas */
+.fa-noscript { position: fixed; bottom: 0; left: 0; right: 0; z-index: 400; padding: 12px 20px; background: #1a1230; color: #fff; text-align: center; font-size: 0.9rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+@media (max-width: 640px) { .fa-hide-sm { display: none; } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}
